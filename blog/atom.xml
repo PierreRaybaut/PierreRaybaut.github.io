@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://pierreraybaut.github.io/</id>
   <title>Pierre Raybaut Blog</title>
-  <updated>2024-07-14T18:08:02.927978+00:00</updated>
+  <updated>2024-07-14T20:39:13.848155+00:00</updated>
   <link href="https://pierreraybaut.github.io/"/>
   <link href="https://pierreraybaut.github.io/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
@@ -18,7 +18,7 @@
 </content>
     <link href="https://pierreraybaut.github.io/blog/first-post/"/>
     <summary>This is my first post, which naturally leads to the question: why write a blog?</summary>
-    <category term="atag" label="atag"/>
+    <category term="General" label="General"/>
     <published>2024-07-14T00:00:00+02:00</published>
   </entry>
 </feed>
