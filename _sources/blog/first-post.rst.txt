@@ -1,0 +1,40 @@
+.. post:: Jul 14, 2024
+   :tags: atag
+   :author: Pierre Raybaut
+
+Why Write a Blog?
+=================
+
+This is my first post, which naturally leads to the question: why write a blog?
+
+Motivation
+----------
+
+Let me take the risk of stating the obvious. For me, starting this blog is motivated by the following reasons:
+
+- **Synthesizing my thoughts somewhere**: No other medium allows me to express my thoughts about open-source projects, new libraries, or techniques in such a structured way.
+
+- **Sharing knowledge**: I have been a long-term advocate of Python in a scientific context. I have created tools like `Spyder`_, `Python(x,y)`_, and `WinPython`_, which have played a pivotal role in making Python a leading language for scientific computing. So, it might be worth sharing my thoughts and experiences with the community.
+
+- **Connecting with the community**: I have been involved in the open-source software community for a long time, but I have always been more of a "silent" worker. Writing a blog is a way to connect with the community in a more direct way.
+
+.. _Spyder: https://www.spyder-ide.org
+.. _Python(x,y): https://python-xy.github.io
+.. _WinPython: https://winpython.github.io
+
+Trigger
+-------
+
+I always have been reluctant to start a blog. My main concerns were
+
+1. **Time**: I was afraid that I would not be able to post regularly. I still am, but I decided to give it a try anyway.
+
+2. **Ego**: The idea of writing a blog is **so ego-centric**. To clarify the fact that *I really don't think of my as a reference in any field*, I almost named this blog "The Ego-Centric Blog" or "My Humble Blog"... but I thought that would be too much of a cliché, or even counter-productive, so I decided to stick with the current name which is more neutral.
+
+.. figure:: ../_static/SciPy2024-Kick-off.jpg
+   :width: 75%
+   :alt: SciPy 2024 Kick-off
+
+   SciPy 2024 Conference kicking off, at the Great Tacoma Convention Center (WA, USA)
+
+The trigger for starting this blog was my attendance at the 2024 SciPy conference. I gave a talk on my 15 years of experience with scientific Python and the lessons I have learned along the way. Preparing for this talk made me realize that I may have a lot to say about the subject. One of the contacts I made at the conference (*hey Paul!*) suggested that I start writing about things I haven't been able to present in my talk due to time constraints. *Challenge accepted!*

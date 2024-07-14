@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://pierreraybaut.github.io/</id>
+  <title>Pierre Raybaut Blog</title>
+  <updated>2024-07-14T18:02:40.785916+00:00</updated>
+  <link href="https://pierreraybaut.github.io/"/>
+  <link href="https://pierreraybaut.github.io/blog/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
+  <entry>
+    <id>https://pierreraybaut.github.io/blog/first-post/</id>
+    <title>Why Write a Blog?</title>
+    <updated>2024-07-14T00:00:00+02:00</updated>
+    <author>
+      <name>Pierre Raybaut</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This is my first post, which naturally leads to the question: why write a blog?&lt;/p&gt;
+&lt;/p&gt;
+</content>
+    <link href="https://pierreraybaut.github.io/blog/first-post/"/>
+    <summary>This is my first post, which naturally leads to the question: why write a blog?</summary>
+    <category term="atag" label="atag"/>
+    <published>2024-07-14T00:00:00+02:00</published>
+  </entry>
+</feed>
