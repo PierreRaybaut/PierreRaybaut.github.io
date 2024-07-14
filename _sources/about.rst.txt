@@ -10,6 +10,7 @@ About me
    :align: left
    :width: 100pt
    :alt: photo
+   :class: no-scaled-link
 
 I am a long-term advocate of Python in a scientific context, known for creating `Spyder`_, the Scientific Python IDE, and other pivotal projects like `Python(x,y)`_ and `WinPython`_. These tools have been instrumental in making Python a leading language for scientific computing.
 

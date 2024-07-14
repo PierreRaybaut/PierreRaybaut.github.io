@@ -5,7 +5,7 @@ My Blog About Scientific Python
 .. figure:: _static/frontpage.png
    :width: 85%
    :alt: banner
-   :class: dark-light
+   :class: dark-light no-scaled-link
 
    SciPy 2024 Conference, at the Great Tacoma Convention Center (WA, USA)
 
