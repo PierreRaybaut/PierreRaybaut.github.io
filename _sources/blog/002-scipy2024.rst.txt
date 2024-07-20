@@ -5,7 +5,7 @@
 SciPy 2024: My first SciPy conference
 =====================================
 
-This July 2024, I attended my first SciPy conference in Tacoma, Washington (US 🇺🇸).
+This July 2024, I attended my first `SciPy conference`_ in Tacoma, Washington (US 🇺🇸).
 
 .. figure:: 002-scipy2024-01-tacoma.jpg
    :width: 85%
@@ -13,7 +13,7 @@ This July 2024, I attended my first SciPy conference in Tacoma, Washington (US �
    
    Tacoma, Washington - and in the background, the majestic Mount Rainier
 
-I had the privilege of representing `Codra <https://www.codra.net>`_, a French company specialized in industrial and scientific IT, and present a talk about `Spyder <https://www.spyder-ide.org>`_, `WinPython <https://winpython.github.io>`_, and `DataLab <https://datalab-platform.com>`_ - as well as a poster centered on the latter.
+I had the privilege of representing `Codra`_, a French company specialized in industrial and scientific IT, and present a talk about `Spyder`_, `WinPython`_, and `DataLab`_ - as well as a `poster on DataLab <https://github.com/user-attachments/files/16123893/DataLab-Poster_SciPy2024-V6.pdf>`_.
 
 What follows is a brief summary of my experience at the conference, and some personal highlights. All of this is subjective, of course.
 
@@ -27,7 +27,7 @@ About the conference
    :class: dark-light
 
 SciPy is a conference gathering attendees from industry, academia, and government to discuss the use of Python in scientific computing.
-It is the largest conference in the world dedicated to the scientific Python ecosystem, and it has been held annually for more than 20 years. The attendance is international, with participants from all over the world, but mostly from the US. Although the participants are involved in very different fields (from astronomy to biology, from physics to finance), they all share a common interest in Python and scientific computing. Today, the conference is organized by the `NumFOCUS <https://numfocus.org>`_ foundation, a non-profit organization that promotes open-source scientific software.
+It is the largest conference in the world dedicated to the scientific Python ecosystem, and it has been held annually for more than 20 years. The attendance is international, with participants from all over the world, but mostly from the US. Although the participants are involved in very different fields (from astronomy to biology, from physics to finance), they all share a common interest in Python and scientific computing. Today, the conference is organized by the `NumFOCUS`_ foundation, a non-profit organization that promotes open-source scientific software.
 
 The conference is divided into three parts: tutorials (2 days), conference (3 days), and sprints (2 days). I attended only the conference part, which includes talks, posters, lightning talks, a job fair, social events, and open spaces.
 
@@ -60,24 +60,46 @@ Coming from France where the latin culture is predominant, I was impressed not o
    
    Some of the volunteers who helped make the conference a success
 
-Personal highlights
--------------------
+Why attend SciPy?
+-----------------
 
-.. figure:: 002-scipy2024-05-tacoma-art-museum.jpg
+.. figure:: 002-scipy2024-06-tacoma-art-museum.jpg
    :width: 75%
    :alt: Attendee social event at the Tacoma Art Museum
    
    Attendee social event at the Tacoma Art Museum
 
-The conference was a great experience for me, for several reasons:
+There are many reasons to attend SciPy.
 
-- **Meeting the community**: I had the opportunity to meet in person many people I only knew online, such as the Spyder or Jupyter developers, and had interesting discussions with them.
+Here are the three main reasons I had in mind when I decided to go, and that were confirmed during the conference:
 
-- **Networking**: I met many people from various backgrounds, such as researchers, engineers or data scientists, and exchanged ideas with them.
+- **Meeting the community and networking**: I had the opportunity to meet in person many people I only knew online, such as the `Spyder`_ or Jupyter developers. Meeting people in person unlocks new opportunities for collaboration or simply for sharing ideas and experiences. The informality of the conference also makes it easier to approach people you don't know and start a conversation. Certainly, this can be continued and developed further online, but it cannot be replaced by virtual interactions.
 
-- **Learning**: I attended many interesting talks about Python, scientific computing, or data science, and learned a lot from them.
+- **Learning**: I attended many interesting talks about Python, scientific computing, or data science, and learned a lot from them. Even this cannot be fully replaced by watching the talks online (I would never have watched so many talks online in a row). First, the interaction with the speaker and the audience, the possibility to ask questions, and the discussions that follow the talk are invaluable. Second, the fact that you are there, your agenda has been cleared for the conference (there is absolutely no chance that my agenda would have been cleared for accessing the same amount of content online), and you are surrounded by people who share the same interests, makes it easier to focus on the talks and to absorb the information.
 
-- **Presenting**: I presented a talk about Spyder, WinPython, and DataLab, and a poster about the latter, and received positive feedback from the audience.
+- **Presenting**: I presented a `talk about Spyder, WinPython, and DataLab <https://cfp.scipy.org/2024/talk/G3MC9L/>`_, and a `poster on DataLab <https://github.com/user-attachments/files/16123893/DataLab-Poster_SciPy2024-V6.pdf>`_, and received positive feedback from the audience. Let me develop a bit more on this point, in the next section.
+
+Introducing DataLab at SciPy
+----------------------------
+
+.. figure:: 002-scipy2024-05-DataLab-Talk.png
+   :width: 75%
+   :alt: DataLab @ SciPy 2024
+   
+   Introducing DataLab at SciPy 2024
+
+.. image:: 002-scipy2024-05-DataLab-Poster.png
+   :width: 40%
+   :alt: DataLab Poster
+   :align: left
+
+One third of my motivation for attending the conference was to present my talk regarding 15 years of scientific Python coding adventures, and to introduce `DataLab`_, the latest and new project I'm involved in. `DataLab`_ is an open-source platform for signal and image processing that was designed to meet two traditionally antagonistic requirements: *customizable scientific processing software* (it is extendable using plugins, macros and remote-control with Python scripts) and *industrial-grade software* (it is designed to be used in production environments, with a focus on maintainability and robustness). Combined with your IDE (preferably `Spyder`_, but it can be any IDE) or your Jupyter notebook, it provides a complete solution for scientific data processing, because it communicates with your IDE or notebook directly from within your Python code (two lines of code are enough to connect your Python code to DataLab). So you may prototype your processing pipelines or debug your applications even quicker than before, by leveraging the power and ease of use of DataLab with the flexibility and interactivity of your IDE or notebook.
+
+Another singularity of `DataLab`_ is that it is validated on two fronts: on one hand, it is functionally validated with 200+ automated tests, and on the other hand, it is scientifically validated so that users can trust the results it provides. See more about DataLab's validation process `here <https://datalab-platform.com/features/index.html#validation>`_. And when we test it, we test it on a lot of different platforms: Windows 7/10/11, Linux (CentOS 8, Ubuntu 22.04, Debian 12) and macOS.
+
+A good sign of robustness is also that a `Debian package is available for DataLab <https://tracker.debian.org/pkg/datalab>`_, and that it is used in production environments by some of our customers.
+
+Let's stop here, I could discuss `DataLab`_ for hours, but that's not the point of this post! 😊
 
 Some talks I attended
 ---------------------
@@ -95,7 +117,7 @@ Here is a selection of talks I attended on the first day:
 
 - `Teaching and Learning Scientific Computing in the age of ChatGPT <https://cfp.scipy.org/2024/talk/BAFG9A/>`_ by `Ryan C Cooper <https://cooperrc.github.io/>`_ (from University of Connecticut). Even if the talk was centered on education, it was fascinating to see how AI assistants like ChatGPT can impact the students' learning experience in a very similar way to workers' experience. I had an interesting discussion with Ryan after his talk, and I shared with him my experience with introducing AI assistant in the workplace, at Codra. In both cases, the AI assistant can help learning or solving problems as long as it is understood as a tool with limitations and caveats - but that's another story!
 
-.. figure:: 002-scipy2024-06-LPython.jpg
+.. figure:: 002-scipy2024-07-LPython.jpg
    :width: 75%
    :alt: LPython, by Ondřej Čertík
    
@@ -118,15 +140,15 @@ On the second day, among others, I attended the following talks:
 
 - Birds-of-a-Feather (BoF) session: `What would you like to see in your scientific IDE? <https://cfp.scipy.org/2024/talk/VWMV7B/>`_ by `C.A.M. Gerlach <https://github.com/CAM-Gerlach>`_ (Python and `Spyder <https://www.spyder-ide.org>`_ core developer):
 
-  -  I was really touched by CAM's introduction: he said something like "We have the creator of Spyder in the room, Pierre Raybaut" - this certainly was perceived as insignificant by most of the attendees, but it had a very singular meaning for me, as I was suddenly getting conscious of the impact of my work on the community. I was also very happy to see that the Spyder community is so active and that the project is in good hands (I'm of course including `Carlos Córdoba <https://github.com/ccordoba12>`_ in this statement, who is the current maintainer of Spyder).
-  - This BoF gathered in the same room people from different backgrounds (researchers, engineers, data scientists, students, etc.) and with different needs and expectations regarding their scientific IDE (adepts of Jupyter, Spyder, VSCode, ...). Many interesting ideas were shared - for example, the relevance of AI assistants in the IDE which surprisingly (for me) was not a consensus among the attendees. *Unfortunately, I assisted only passively to this BoF because I was completely jet-lagged...*
+  -  I was really touched by CAM's introduction: he said something like "We have the creator of `Spyder`_ in the room, Pierre Raybaut" - this certainly was perceived as insignificant by most of the attendees, but it had a very singular meaning for me, as I was suddenly getting conscious of the impact of my work on the community. I was also very happy to see that the `Spyder`_ community is so active and that the project is in good hands (I'm of course including `Carlos Córdoba <https://github.com/ccordoba12>`_ in this statement, who is the current maintainer of `Spyder`_).
+  - This BoF gathered in the same room people from different backgrounds (researchers, engineers, data scientists, students, etc.) and with different needs and expectations regarding their scientific IDE (adepts of Jupyter, `Spyder`_, VSCode, ...). Many interesting ideas were shared - for example, the relevance of AI assistants in the IDE which surprisingly (for me) was not a consensus among the attendees. *Unfortunately, I assisted only passively to this BoF because I was completely jet-lagged...*
 
 .. note::
 
    Birds-of-a-Feather (BoF) sessions are informal gatherings of people around a specific topic. They are a great way to meet people with similar interests and discuss ideas. 
    This was the first time I attended a BoF session, and I found it very interesting. I hope that I will be able to participate more actively next time!
 
-.. figure:: 002-scipy2024-07-anywidget.jpg
+.. figure:: 002-scipy2024-08-anywidget.jpg
    :width: 75%
    :alt: anywidget, by Trevor Manz
    
@@ -142,13 +164,13 @@ Here is a selection of talks I attended:
 
 - `Keynote: Particles, People, and Pull Requests <https://cfp.scipy.org/2024/talk/B8EXNV/>`_ by `Kyle Cranmer <https://www.physics.wisc.edu/directory/cranmer-kyle/>`_ (from University of Wisconsin-Madison’s Data Science Institute). Kyle gave an interesting talk that would be far too long to summarize here. It was dense but very fluid and well-structured. It is amazing to see how much can be done with open-source computing tools when such a vast community is involved towards a common goal. The evocation of `ROOT <https://root.cern.ch/>`_ made me smile as I had the opportunity to work with it on a project at Codra a couple of years ago, helping a customer to migrate from ROOT to Python. Tons of other tools, mostly Python-based, were mentioned, but that's another story!
 
-.. figure:: 002-scipy2024-08-spyder.jpg
+.. figure:: 002-scipy2024-09-spyder.jpg
    :width: 75%
    :alt: Spyder, by C.A.M. Gerlach
    
    Spyder: The Scientific Python Development Environment — by C.A.M. Gerlach
 
-- During the *SciPy Tools Plenary*, I was positively surprised by the presentation of `Spyder <https://www.spyder-ide.org>`_ by `C.A.M. Gerlach <https://github.com/CAM-Gerlach>`_: CAM presented the project with such energy and enthousiasm that I was really proud to see that the project I created 15 years ago is still alive and kicking! Again, this situation was almost unreal for me: I was in the audience, listening to someone presenting my own project, and I was so happy to see that the project is in good hands and that the community is so active. Kudos to the Spyder team for keeping the project in such a good shape!
+- During the *SciPy Tools Plenary*, I was positively surprised by the presentation of `Spyder`_ by `C.A.M. Gerlach <https://github.com/CAM-Gerlach>`_: CAM presented the project with such energy and enthousiasm that I was really proud to see that the project I created 15 years ago is still alive and kicking! Again, this situation was almost unreal for me: I was in the audience, listening to someone presenting my own project, and I was so happy to see that the project is in good hands and that the community is so active. Kudos to the `Spyder`_ team for keeping the project in such a good shape!
 
 - `Scikit-build-core: A modern build-backend for CPython C/C++/Fortran/Cython extensions <https://cfp.scipy.org/2024/talk/TSNQJT/>`_ by `Jean-Christophe Fillion-Robin <https://www.kitware.com/jean-christophe-fillion-robin/>`_ (from `Kitware <https://www.kitware.com/>`_). Jean-Christophe presented `scikit-build-core <https://github.com/scikit-build/scikit-build-core>`_, a modern build system for Python C/C++/Fortran/Cython extensions. This talk was as much technical as it was clear. It surely gave me some ideas for improving the build system of some of projects I'm involved in (e.g. `PlotPy <https://github.com/PlotPyStack/plotpy>`_ which has both C++ and Cython extensions).
 
@@ -164,13 +186,21 @@ I think I will try and give one next time! I already have some ideas...
 Final thoughts
 --------------
 
-.. image:: 002-scipy2024-09-spyder-t-shirt.jpg
+.. image:: 002-scipy2024-10-spyder-t-shirt.jpg
    :width: 30%
    :alt: My Spyder t-shirt
    :align: right
+   :class: no-scaled-link
 
 I had a great time at SciPy 2024, and I'm looking forward to attending the next edition.
 I certainly learned a lot, met interesting people, and had fun.
 
 But most importantly, I felt part of a community, and that's what matters the most to me...
-...no, sorry, most importantly, I got a cool Spyder t-shirt! (thanks to the Spyder team for the gift!)
+...no, sorry, most importantly, I got a cool `Spyder`_ t-shirt! (thanks to the `Spyder`_ team for the gift!)
+
+.. _SciPy conference: https://www.scipy2024.scipy.org/
+.. _Codra: https://www.codra.net
+.. _Spyder: https://www.spyder-ide.org
+.. _DataLab: https://datalab-platform.com
+.. _WinPython: https://winpython.github.io
+.. _NumFOCUS: https://numfocus.org

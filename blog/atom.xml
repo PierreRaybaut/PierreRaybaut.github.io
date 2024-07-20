@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://pierreraybaut.github.io/</id>
   <title>Pierre Raybaut Blog</title>
-  <updated>2024-07-20T14:13:08.096073+00:00</updated>
+  <updated>2024-07-20T15:11:45.059371+00:00</updated>
   <link href="https://pierreraybaut.github.io/"/>
   <link href="https://pierreraybaut.github.io/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
@@ -13,7 +13,7 @@
     <author>
       <name>Pierre Raybaut</name>
     </author>
-    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This July 2024, I attended my first SciPy conference in Tacoma, Washington (US 🇺🇸).&lt;/p&gt;
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This July 2024, I attended my first &lt;a class="reference external" href="https://www.scipy2024.scipy.org/"&gt;SciPy conference&lt;/a&gt; in Tacoma, Washington (US 🇺🇸).&lt;/p&gt;
 &lt;/p&gt;
 </content>
     <link href="https://pierreraybaut.github.io/blog/002-scipy2024/"/>
