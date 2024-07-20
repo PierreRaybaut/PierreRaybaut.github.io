@@ -20,7 +20,16 @@ What follows is a brief summary of my experience at the conference, and some per
 About the conference
 --------------------
 
-SciPy is a conference gathering attendees from industry, academia, and government to discuss the use of Python in scientific computing. It is divided into three parts: tutorials (2 days), conference (3 days), and sprints (2 days). I attended only the conference part, which includes talks, posters, lightning talks, a job fair, social events, and open spaces.
+.. image:: 002-scipy2024-00-logo.png
+   :width: 30%
+   :alt: SciPy 2024 Logo
+   :align: left
+   :class: dark-light
+
+SciPy is a conference gathering attendees from industry, academia, and government to discuss the use of Python in scientific computing.
+It is the largest conference in the world dedicated to the scientific Python ecosystem, and it has been held annually for more than 20 years. The attendance is international, with participants from all over the world, but mostly from the US. Although the participants are involved in very different fields (from astronomy to biology, from physics to finance), they all share a common interest in Python and scientific computing. Today, the conference is organized by the `NumFOCUS <https://numfocus.org>`_ foundation, a non-profit organization that promotes open-source scientific software.
+
+The conference is divided into three parts: tutorials (2 days), conference (3 days), and sprints (2 days). I attended only the conference part, which includes talks, posters, lightning talks, a job fair, social events, and open spaces.
 
 .. figure:: 002-scipy2024-02-convention-center.jpg
    :width: 75%
