@@ -1,0 +1,837 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SciPy 2024: My first SciPy conference &#8212; Pierre Raybaut</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'blog/002-scipy2024';</script>
+    <link rel="canonical" href="https://pierreraybaut.github.io/blog/002-scipy2024/" />
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="Pierre Raybaut Blog"
+/>
+
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/PierreRaybaut-banner-light.png" class="logo__image only-light" alt="Pierre Raybaut - Home"/>
+    <script>document.write(`<img src="../../_static/PierreRaybaut-banner-dark.png" class="logo__image only-dark" alt="Pierre Raybaut - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../about/">
+    About me
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../license/">
+    Licensing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PierreRaybaut" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/pierre-raybaut/" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/pierreraybaut" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://fosstodon.org/@pierre_raybaut" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Mastodon</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../about/">
+    About me
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../license/">
+    Licensing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PierreRaybaut" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/pierre-raybaut/" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/pierreraybaut" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://fosstodon.org/@pierre_raybaut" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Mastodon</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  <span>20 juillet 2024</span>
+  
+</h2>
+<ul>
+  <div class="ablog-sidebar-item ablog__postcard2">
+
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
+    
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../author/pierre-raybaut/">Pierre Raybaut</a>
+  
+  
+  
+</li>
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tag"></i>
+    
+    </span>
+  
+  
+  <a href="../tag/conferences/">Conferences</a>
+  
+  
+  
+</li>
+
+
+</div>
+</ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__recentposts">
+<h3>
+  <a href="../">Recent Posts</a>
+</h3>
+<ul>
+  
+  
+  <li>
+    <a href="../001-why/">
+      14 juillet - Why Write a Blog?
+    </a>
+  </li>
+  
+</ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__tags">
+<link rel="stylesheet" href="../../_static/ablog/tagcloud.css" type="text/css" />
+<h3><a href="../tag/">Tags</a></h3>
+<ul class="ablog-cloud">
+  
+  
+  <li class="ablog-cloud ablog-cloud-3">
+    <a href="../tag/conferences/">Conferences</a>
+  </li>
+  
+  
+  
+  <li class="ablog-cloud ablog-cloud-3">
+    <a href="../tag/general/">General</a>
+  </li>
+  
+  
+</ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__archive">
+<h3>
+  <a href="../archive/">Archives</a>
+</h3>
+<ul>
+  
+  
+  <li>
+    <a href="../2024/">2024 (2)</a>
+  </li>
+  
+  
+</ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">SciPy 2024:...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+<section id="scipy-2024-my-first-scipy-conference">
+<h1>SciPy 2024: My first SciPy conference<a class="headerlink" href="#scipy-2024-my-first-scipy-conference" title="Link to this heading">#</a></h1>
+<p>This July 2024, I attended my first SciPy conference in Tacoma, Washington (US 🇺🇸).</p>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../../_images/002-scipy2024-01-tacoma.jpg"><img alt="Tacoma, Washington" src="../../_images/002-scipy2024-01-tacoma.jpg" style="width: 85%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Tacoma, Washington - and in the background, the majestic Mount Rainier</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>I had the privilege of representing <a class="reference external" href="https://www.codra.net">Codra</a>, a French company specialized in industrial and scientific IT, and present a talk about <a class="reference external" href="https://www.spyder-ide.org">Spyder</a>, <a class="reference external" href="https://winpython.github.io">WinPython</a>, and <a class="reference external" href="https://datalab-platform.com">DataLab</a> - as well as a poster centered on the latter.</p>
+<p>What follows is a brief summary of my experience at the conference, and some personal highlights. All of this is subjective, of course.</p>
+<section id="about-the-conference">
+<h2>About the conference<a class="headerlink" href="#about-the-conference" title="Link to this heading">#</a></h2>
+<p>SciPy is a conference gathering attendees from industry, academia, and government to discuss the use of Python in scientific computing. It is divided into three parts: tutorials (2 days), conference (3 days), and sprints (2 days). I attended only the conference part, which includes talks, posters, lightning talks, a job fair, social events, and open spaces.</p>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../../_images/002-scipy2024-02-convention-center.jpg"><img alt="Greater Tacoma Convention Center" src="../../_images/002-scipy2024-02-convention-center.jpg" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Greater Tacoma Convention Center, where SciPy 2024 was held</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The 2024 edition was held at the Greater Tacoma Convention Center (near Seattle), a modern building with a large ball room for the main talks, and several smaller rooms for parallel sessions.</p>
+</section>
+<section id="about-the-organization">
+<h2>About the organization<a class="headerlink" href="#about-the-organization" title="Link to this heading">#</a></h2>
+<p>I was impressed by the quality of the organization: everything was well planned, from the registration process to the talks schedule, and the staff was very helpful and friendly. The conference was well attended, with about 800 participants (all categories combined), and the atmosphere was relaxed and convivial.</p>
+<p>Organizers and volunteers were incredibly efficient and responsive, and the conference ran smoothly.</p>
+<figure class="align-default" id="id8">
+<a class="reference internal image-reference" href="../../_images/002-scipy2024-03-ball-room.jpg"><img alt="Ball room" src="../../_images/002-scipy2024-03-ball-room.jpg" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Ball room at the Greater Tacoma Convention Center - Amazing how smoothly the conference ran with so many attendees!</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Coming from France where the latin culture is predominant, I was impressed not only by the efficiency of the organization but also by the politeness and the respect of the rules by the attendees which clearly contributed to the success of the event.</p>
+<figure class="align-default" id="id9">
+<a class="reference internal image-reference" href="../../_images/002-scipy2024-04-volunteers.jpg"><img alt="Some of the volunteers" src="../../_images/002-scipy2024-04-volunteers.jpg" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Some of the volunteers who helped make the conference a success</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="personal-highlights">
+<h2>Personal highlights<a class="headerlink" href="#personal-highlights" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="id10">
+<a class="reference internal image-reference" href="../../_images/002-scipy2024-05-tacoma-art-museum.jpg"><img alt="Attendee social event at the Tacoma Art Museum" src="../../_images/002-scipy2024-05-tacoma-art-museum.jpg" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Attendee social event at the Tacoma Art Museum</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The conference was a great experience for me, for several reasons:</p>
+<ul class="simple">
+<li><p><strong>Meeting the community</strong>: I had the opportunity to meet in person many people I only knew online, such as the Spyder or Jupyter developers, and had interesting discussions with them.</p></li>
+<li><p><strong>Networking</strong>: I met many people from various backgrounds, such as researchers, engineers or data scientists, and exchanged ideas with them.</p></li>
+<li><p><strong>Learning</strong>: I attended many interesting talks about Python, scientific computing, or data science, and learned a lot from them.</p></li>
+<li><p><strong>Presenting</strong>: I presented a talk about Spyder, WinPython, and DataLab, and a poster about the latter, and received positive feedback from the audience.</p></li>
+</ul>
+</section>
+<section id="some-talks-i-attended">
+<h2>Some talks I attended<a class="headerlink" href="#some-talks-i-attended" title="Link to this heading">#</a></h2>
+<p>Here are some talks I attended and found especially interesting (among many others), in chronological order.</p>
+<section id="day-1">
+<h3>Day 1<a class="headerlink" href="#day-1" title="Link to this heading">#</a></h3>
+<p>Here is a selection of talks I attended on the first day:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cfp.scipy.org/2024/talk/PD93HQ/">Keynote: The Right Tool for the Job</a> by <a class="reference external" href="https://juliasilge.com/">Julia Silge</a> (from <a class="reference external" href="https://posit.co/">Posit</a>, the company behind RStudio and Shiny). Among other things, Julia gave an interesting perspective on how she would handle a team with different technical backgrounds and preferences. She highlighted the fact that forcing everyone to use the same tools can be counterproductive, and that it is better to let people use the tools they are most comfortable with, as long as they are able to communicate and collaborate effectively. The main reason for this is that learning a new tool can be time-consuming and frustrating. It cannot be generalized of course - simply because when a project requires a specific technology (either because of performance, compatibility, or customer requirements), you can’t just say “oh, it’s fine if you use another one as long as you communicate effectively with the rest of the team” - but in the context of a data science team for example, it makes sense.</p></li>
+<li><p><a class="reference external" href="https://cfp.scipy.org/2024/talk/NGRVJJ/">Dask in Production</a> by <a class="reference external" href="https://matthewrocklin.com/">Matthew Rocklin</a> (from <a class="reference external" href="https://www.coiled.io">Coiled</a>): a talk about <a class="reference external" href="https://www.dask.org/">Dask</a>, a parallel computing library, and its use in production environments. Technical and insightful: Dask is impressive, and Matthew is a great speaker - inspiring! Another talk was echoing this one: <a class="reference external" href="https://cfp.scipy.org/2024/talk/79SXUF/">Pandas + Dask DataFrame 2.0 - Comparison to Spark, DuckDB and Polars</a> by <a class="reference external" href="https://www.jamesbourbeau.com/">James Bourbeau</a> (<a class="reference external" href="https://www.coiled.io">Coiled</a>), another great speaker but with a different style - Coiled has a great team, with a well-polished communication!</p></li>
+<li><p><a class="reference external" href="https://cfp.scipy.org/2024/talk/BAFG9A/">Teaching and Learning Scientific Computing in the age of ChatGPT</a> by <a class="reference external" href="https://cooperrc.github.io/">Ryan C Cooper</a> (from University of Connecticut). Even if the talk was centered on education, it was fascinating to see how AI assistants like ChatGPT can impact the students’ learning experience in a very similar way to workers’ experience. I had an interesting discussion with Ryan after his talk, and I shared with him my experience with introducing AI assistant in the workplace, at Codra. In both cases, the AI assistant can help learning or solving problems as long as it is understood as a tool with limitations and caveats - but that’s another story!</p></li>
+</ul>
+<figure class="align-default" id="id11">
+<a class="reference internal image-reference" href="../../_images/002-scipy2024-06-LPython.jpg"><img alt="LPython, by Ondřej Čertík" src="../../_images/002-scipy2024-06-LPython.jpg" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">LPython: Novel, Fast, Retargetable Python Compiler — by Ondřej Čertík</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cfp.scipy.org/2024/talk/7CUT9D/">LPython: Novel, Fast, Retargetable Python Compiler</a> by <a class="reference external" href="https://ondrejcertik.com/">Ondřej Čertík</a> (from Microsoft) - as I already mentioned in social media, <a class="reference external" href="https://lpython.org/">LPython</a> is a very promising project. It is a Python compiler capable of executing Python code faster than CPython, thanks to extreme optimizations. Ondřej brilliantly presented the project and its potential, emphasizing the singular performance of LPython: “if it’s slower than C, it’s a bug” - I like that attitude!</p></li>
+<li><p><a class="reference external" href="https://cfp.scipy.org/2024/talk/KTZHZM/">No-Code-Change GPU Acceleration for Your Pandas and NetworkX Workflows</a> by <a class="reference external" href="https://developer.nvidia.com/blog/author/rratzel/">Rick Ratzel</a> and <a class="reference external" href="https://vyasr.com/">Vyas Ramasubramani</a> (from <a class="reference external" href="https://rapids.ai/">RAPIDS</a> team at NVIDIA). This talk was about <a class="reference external" href="https://docs.rapids.ai/api/cudf/stable/">cuDF</a> and <a class="reference external" href="https://docs.rapids.ai/api/cugraph/stable/">cuGraph</a>, two libraries from the <a class="reference external" href="https://rapids.ai/">RAPIDS</a> suite that provide GPU-accelerated dataframes and graph analytics. The performance gains are impressive… without changing a single line of code! (for example, the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> import is automatically replaced by <code class="docutils literal notranslate"><span class="pre">cudf</span></code>: no need to change anything in your code).</p></li>
+</ul>
+</section>
+<section id="day-2">
+<h3>Day 2<a class="headerlink" href="#day-2" title="Link to this heading">#</a></h3>
+<p>On the second day, among others, I attended the following talks:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cfp.scipy.org/2024/talk/7GEVPA/">Keynote: Explainable AI for Climate Science: Opening the black box to reveal planet earth</a> by <a class="reference external" href="https://www.atmos.colostate.edu/people/faculty/barnes/">Elizabeth Barnes</a> (from Colorado State University). A fascinating talk about a fascinating subject: climate science. Elizabeth explained how AI can help climate scientists to better understand the Earth’s climate system, while insisting on the importance of explainability (a very illustrative example was given: a model recognizing horses in pictures but that was actually trained on samples of horses systematically photographed with a specific label in the corner of the picture - the model was actually recognizing the label, not the horses!). She also shown how little initial conditions variations can lead to very different climate predictions, again with very illustrative examples. Elizabeth is certainly used to giving talks, but she is also a gifted speaker.</p></li>
+<li><p><a class="reference external" href="https://cfp.scipy.org/2024/talk/X9JUXN/">Making Research Data Flow with Python</a> by <a class="reference external" href="https://joshborrow.com/">Josh Borrow</a> (from Simons Observatory, University of Pennsylvania). This was the first SciPy participation of Josh, and I know that because he told me right before his talk (my own talk was just after his): otherwise, I would have never guessed it because he was so confident and professional. Another great talk, about a framework named <a class="reference external" href="https://github.com/simonsobs/librarian">librarian</a> that handles data transfer orchestration for Simons Observatory, using Python, <a class="reference external" href="https://fastapi.tiangolo.com/">FastAPI</a>, <a class="reference external" href="https://www.postgresql.org/">PostgreSQL</a>, and <a class="reference external" href="https://www.globus.org/">Globus</a>.</p></li>
+<li><p>After that, I gave my own talk: <a class="reference external" href="https://cfp.scipy.org/2024/talk/G3MC9L/">From Spyder to DataLab: 15 years of scientific software crafting in Python</a>. I was not quite satisfied with my performance… but I’m never good enough for myself, so I’m used to it! 😊</p></li>
+<li><p>Birds-of-a-Feather (BoF) session: <a class="reference external" href="https://cfp.scipy.org/2024/talk/VWMV7B/">What would you like to see in your scientific IDE?</a> by <a class="reference external" href="https://github.com/CAM-Gerlach">C.A.M. Gerlach</a> (Python and <a class="reference external" href="https://www.spyder-ide.org">Spyder</a> core developer):</p>
+<ul>
+<li><p>I was really touched by CAM’s introduction: he said something like “We have the creator of Spyder in the room, Pierre Raybaut” - this certainly was perceived as insignificant by most of the attendees, but it had a very singular meaning for me, as I was suddenly getting conscious of the impact of my work on the community. I was also very happy to see that the Spyder community is so active and that the project is in good hands (I’m of course including <a class="reference external" href="https://github.com/ccordoba12">Carlos Córdoba</a> in this statement, who is the current maintainer of Spyder).</p></li>
+<li><p>This BoF gathered in the same room people from different backgrounds (researchers, engineers, data scientists, students, etc.) and with different needs and expectations regarding their scientific IDE (adepts of Jupyter, Spyder, VSCode, …). Many interesting ideas were shared - for example, the relevance of AI assistants in the IDE which surprisingly (for me) was not a consensus among the attendees. <em>Unfortunately, I assisted only passively to this BoF because I was completely jet-lagged…</em></p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Birds-of-a-Feather (BoF) sessions are informal gatherings of people around a specific topic. They are a great way to meet people with similar interests and discuss ideas.
+This was the first time I attended a BoF session, and I found it very interesting. I hope that I will be able to participate more actively next time!</p>
+</div>
+<figure class="align-default" id="id12">
+<a class="reference internal image-reference" href="../../_images/002-scipy2024-07-anywidget.jpg"><img alt="anywidget, by Trevor Manz" src="../../_images/002-scipy2024-07-anywidget.jpg" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">anywidget: custom Jupyter Widgets made easy — by Trevor Manz</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cfp.scipy.org/2024/talk/UMNVPH/">anywidget: custom Jupyter Widgets made easy</a> by <a class="reference external" href="https://hidivelab.org/team/members/trevor-manz/">Trevor Manz</a> (from <a class="reference external" href="https://hidivelab.org/">HIDIve Lab</a>). Trevor presented <a class="reference external" href="https://github.com/manzt/anywidget">anywidget</a>, a library for creating custom Jupyter widgets easily that has become <em>the</em> reference in this domain for a few months. Even if I already saw the library in action and was familiar with the demo, this talk was a great opportunity to hear from the maintainer himself and helped realize the impact of this library on the Jupyter ecosystem.</p></li>
+</ul>
+</section>
+<section id="day-3">
+<h3>Day 3<a class="headerlink" href="#day-3" title="Link to this heading">#</a></h3>
+<p>On the third day, I was there only in the morning (I had to leave early to catch my flight).
+Here is a selection of talks I attended:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cfp.scipy.org/2024/talk/B8EXNV/">Keynote: Particles, People, and Pull Requests</a> by <a class="reference external" href="https://www.physics.wisc.edu/directory/cranmer-kyle/">Kyle Cranmer</a> (from University of Wisconsin-Madison’s Data Science Institute). Kyle gave an interesting talk that would be far too long to summarize here. It was dense but very fluid and well-structured. It is amazing to see how much can be done with open-source computing tools when such a vast community is involved towards a common goal. The evocation of <a class="reference external" href="https://root.cern.ch/">ROOT</a> made me smile as I had the opportunity to work with it on a project at Codra a couple of years ago, helping a customer to migrate from ROOT to Python. Tons of other tools, mostly Python-based, were mentioned, but that’s another story!</p></li>
+</ul>
+<figure class="align-default" id="id13">
+<a class="reference internal image-reference" href="../../_images/002-scipy2024-08-spyder.jpg"><img alt="Spyder, by C.A.M. Gerlach" src="../../_images/002-scipy2024-08-spyder.jpg" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Spyder: The Scientific Python Development Environment — by C.A.M. Gerlach</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>During the <em>SciPy Tools Plenary</em>, I was positively surprised by the presentation of <a class="reference external" href="https://www.spyder-ide.org">Spyder</a> by <a class="reference external" href="https://github.com/CAM-Gerlach">C.A.M. Gerlach</a>: CAM presented the project with such energy and enthousiasm that I was really proud to see that the project I created 15 years ago is still alive and kicking! Again, this situation was almost unreal for me: I was in the audience, listening to someone presenting my own project, and I was so happy to see that the project is in good hands and that the community is so active. Kudos to the Spyder team for keeping the project in such a good shape!</p></li>
+<li><p><a class="reference external" href="https://cfp.scipy.org/2024/talk/TSNQJT/">Scikit-build-core: A modern build-backend for CPython C/C++/Fortran/Cython extensions</a> by <a class="reference external" href="https://www.kitware.com/jean-christophe-fillion-robin/">Jean-Christophe Fillion-Robin</a> (from <a class="reference external" href="https://www.kitware.com/">Kitware</a>). Jean-Christophe presented <a class="reference external" href="https://github.com/scikit-build/scikit-build-core">scikit-build-core</a>, a modern build system for Python C/C++/Fortran/Cython extensions. This talk was as much technical as it was clear. It surely gave me some ideas for improving the build system of some of projects I’m involved in (e.g. <a class="reference external" href="https://github.com/PlotPyStack/plotpy">PlotPy</a> which has both C++ and Cython extensions).</p></li>
+</ul>
+</section>
+</section>
+<section id="about-lightning-talks">
+<h2>About Lightning Talks<a class="headerlink" href="#about-lightning-talks" title="Link to this heading">#</a></h2>
+<p>That’s an experience in itself!</p>
+<p>Lightning talks are short talks (5 minutes) given by attendees about any topic they want. Funny, serious, technical, personal, etc. - anything goes! Judiciously placed at the end of the day, they are a great way to relax and have fun after a long day of talks.</p>
+<p>I think I will try and give one next time! I already have some ideas…</p>
+</section>
+<section id="final-thoughts">
+<h2>Final thoughts<a class="headerlink" href="#final-thoughts" title="Link to this heading">#</a></h2>
+<a class="reference internal image-reference" href="../../_images/002-scipy2024-09-spyder-t-shirt.jpg"><img alt="My Spyder t-shirt" class="align-right" src="../../_images/002-scipy2024-09-spyder-t-shirt.jpg" style="width: 30%;" />
+</a>
+<p>I had a great time at SciPy 2024, and I’m looking forward to attending the next edition.
+I certainly learned a lot, met interesting people, and had fun.</p>
+<p>But most importantly, I felt part of a community, and that’s what matters the most to me…
+…no, sorry, most importantly, I got a cool Spyder t-shirt! (thanks to the Spyder team for the gift!)</p>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+  
+  
+
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
+    <a href="../001-why/">
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>Why Write a Blog?</span>
+    </a>
+    
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+  </span>
+</div>
+
+  
+  
+</div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-the-conference">About the conference</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-the-organization">About the organization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#personal-highlights">Personal highlights</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-talks-i-attended">Some talks I attended</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1">Day 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#day-2">Day 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#day-3">Day 3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-lightning-talks">About Lightning Talks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-thoughts">Final thoughts</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Pierre Raybaut.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

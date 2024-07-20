@@ -2,12 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://pierreraybaut.github.io/</id>
   <title>Pierre Raybaut Blog</title>
-  <updated>2024-07-14T20:39:13.848155+00:00</updated>
+  <updated>2024-07-20T13:51:07.021547+00:00</updated>
   <link href="https://pierreraybaut.github.io/"/>
   <link href="https://pierreraybaut.github.io/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
   <entry>
-    <id>https://pierreraybaut.github.io/blog/first-post/</id>
+    <id>https://pierreraybaut.github.io/blog/002-scipy2024/</id>
+    <title>SciPy 2024: My first SciPy conference</title>
+    <updated>2024-07-20T00:00:00+02:00</updated>
+    <author>
+      <name>Pierre Raybaut</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This July 2024, I attended my first SciPy conference in Tacoma, Washington (US 🇺🇸).&lt;/p&gt;
+&lt;/p&gt;
+</content>
+    <link href="https://pierreraybaut.github.io/blog/002-scipy2024/"/>
+    <summary>This July 2024, I attended my first SciPy conference in Tacoma, Washington (US 🇺🇸).</summary>
+    <category term="Conferences" label="Conferences"/>
+    <published>2024-07-20T00:00:00+02:00</published>
+  </entry>
+  <entry>
+    <id>https://pierreraybaut.github.io/blog/001-why/</id>
     <title>Why Write a Blog?</title>
     <updated>2024-07-14T00:00:00+02:00</updated>
     <author>
@@ -16,7 +31,7 @@
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This is my first post, which naturally leads to the question: why write a blog?&lt;/p&gt;
 &lt;/p&gt;
 </content>
-    <link href="https://pierreraybaut.github.io/blog/first-post/"/>
+    <link href="https://pierreraybaut.github.io/blog/001-why/"/>
     <summary>This is my first post, which naturally leads to the question: why write a blog?</summary>
     <category term="General" label="General"/>
     <published>2024-07-14T00:00:00+02:00</published>

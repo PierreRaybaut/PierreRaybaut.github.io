@@ -1,0 +1,18 @@
+# Licensing
+
+## Text Content License
+
+All textual content in this blog, including pictures, diagrams, and other media, is licensed under the Creative Commons Attribution-NoDerivatives 4.0 International License (CC BY-ND 4.0). This means you are free to share, copy, and redistribute the material in any medium or format, under the following terms:
+
+- **Attribution**: You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+- **NoDerivatives**: If you remix, transform, or build upon the material, you may not distribute the modified material.
+
+To view a copy of this license, visit [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/).
+
+## Code License
+
+All code snippets and software in this blog are licensed under the MIT License. This permits you to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, subject to the following conditions:
+
+- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+To view a copy of this license, visit [MIT License](https://opensource.org/licenses/MIT).
