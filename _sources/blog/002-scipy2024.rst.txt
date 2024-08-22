@@ -101,6 +101,13 @@ A good sign of robustness is also that a `Debian package is available for DataLa
 
 Let's stop here, I could discuss `DataLab`_ for hours, but that's not the point of this post! 😊
 
+And here is my full `talk about Spyder, WinPython, and DataLab <https://cfp.scipy.org/2024/talk/G3MC9L/>`_:
+
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/MKPUuV1LEqk"
+   frameborder="0" allowfullscreen></iframe>
+
 Some talks I attended
 ---------------------
 
