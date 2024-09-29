@@ -14,6 +14,10 @@ This September, I attended `PyData Paris 2024 <https://pydata.org/paris2024/>`_,
 
 The conference was organized by `QuantStack <https://quantstack.net/>`_, a French scientific computing company that is also behind the `Jupyter <https://jupyter.org/>`_ project. The event was a great opportunity to meet with the data science community and to learn about the latest developments in the field.
 
+.. note::
+
+    This was my first sponsoring experience at a conference, as `Codra <https://codra.net/>`_ (my company) was one of the Gold sponsors of the event. Sponsoring the event was surely a great opportunity for Codra to showcase its activities and to connect with the community, but, as an open-source advocate, I also saw it as a way to give back to the community and to support the development of open-source software. So, **I'm proud that Codra has supported the event and has contributed to the success of the conference.**
+
 Codra at PyData Paris 2024
 --------------------------
 
@@ -26,7 +30,7 @@ Codra at PyData Paris 2024
 
 We had a booth where we showcased:
 
-1. The `DataLab platform <https://datalab-platform.com>`, an open-source platform for signal and image processing with Python.
+1. The `DataLab platform <https://datalab-platform.com>`_, an open-source platform for signal and image processing with Python.
 2. The Engineering Department's activities, including the development of scientific software. The associated roll-up presented the three main activities of the department in French ("Contrôle-Commande, Systèmes d'Information métier, Logiciels scientifiques" which stands for "Control Systems, Business Information Systems, Scientific Software" in English) because we are mostly working with French-speaking customers.
 
 .. note::
