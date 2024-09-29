@@ -1,0 +1,18 @@
+.. post:: Oct 15, 2024
+    :tags: Desktop Apps, Python, Qt
+    :author: Pierre Raybaut
+
+Desktop applications are still relevant
+=======================================
+
+Historically, desktop applications were the first type of applications that were developed. Before the emergence of the web, i.e. before the 1990s, they were the only way to interact with a computer. After a long period of time where they still were unchallengeable for advanced tasks like scientific computing, they have been progressively replaced by web applications, starting somewhere in the 2010s with the rise of cloud computing. Today, technologies have reach a point where web applications are able to compete with desktop applications in terms of performance and user experience.
+
+However, desktop applications are still relevant for several reasons:
+
+1. **Performance**: desktop applications are generally faster than web applications because they run locally on the user's machine. This is particularly important for applications that require a lot of computing power, like scientific computing applications. *Well, actually, this is not entirely true: web applications can also leverage the user's machine to run computations, thanks to advanced technologies like WebAssembly or WebGPU. Besides, for use cases where data is remote (because it is too large to be stored locally), web applications can be faster than desktop applications because they can leverage the power of cloud computing.*
+
+2. **User experience**: desktop applications can provide a better user experience than web applications because they can leverage the full capabilities of the user's machine, like the GPU or the file system. *Again, this is not entirely true for the same reasons as above. However, it is true that desktop applications can provide a more consistent user experience because they are not dependent on the browser (they can be designed to look the same on all platforms), and advanced interaction features are easier to implement (so web applications may be more limited in terms of user experience for complex use cases, and for cost reasons).*
+
+3. **Offline mode**: desktop applications can work offline, which is not the case for web applications. *Actually, this is not entirely true: web applications can also work offline, thanks to technologies like Service Workers. However, it is true that desktop applications are more reliable in offline mode because they are not dependent on the browser.*
+
+4. **Deployment**: desktop applications are easier to deploy than web applications because they do not require a server. *Actually, this is not entirely true: web applications can be deployed on a server that is managed by a third party, so they can be easier to deploy than desktop applications. However, it is true that desktop applications can be deployed on the user's machine, which can be more convenient for some use cases.*

@@ -2,10 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://pierreraybaut.github.io/</id>
   <title>Pierre Raybaut Blog</title>
-  <updated>2024-08-22T15:45:09.378297+00:00</updated>
+  <updated>2024-09-29T12:59:33.901194+00:00</updated>
   <link href="https://pierreraybaut.github.io/"/>
   <link href="https://pierreraybaut.github.io/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
+  <entry>
+    <id>https://pierreraybaut.github.io/blog/003-pydataparis2024/</id>
+    <title>PyData Paris 2024: My First Sponsoring Experience</title>
+    <updated>2024-09-26T00:00:00+02:00</updated>
+    <author>
+      <name>Pierre Raybaut</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This September, I attended &lt;a class="reference external" href="https://pydata.org/paris2024/"&gt;PyData Paris 2024&lt;/a&gt;, a conference dedicated to data science and machine learning with Python (and friends). The conference was held at the &lt;a class="reference external" href="https://www.cite-sciences.fr/fr/accueil/"&gt;Cité des Sciences et de l’Industrie&lt;/a&gt; in Paris (France 🇫🇷).&lt;/p&gt;
+&lt;/p&gt;
+</content>
+    <link href="https://pierreraybaut.github.io/blog/003-pydataparis2024/"/>
+    <summary>This September, I attended PyData Paris 2024, a conference dedicated to data science and machine learning with Python (and friends). The conference was held at the Cité des Sciences et de l’Industrie in Paris (France 🇫🇷).</summary>
+    <category term="Conferences" label="Conferences"/>
+    <published>2024-09-26T00:00:00+02:00</published>
+  </entry>
   <entry>
     <id>https://pierreraybaut.github.io/blog/002-scipy2024/</id>
     <title>SciPy 2024: My first SciPy conference</title>

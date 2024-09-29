@@ -1,0 +1,88 @@
+.. post:: Sept 26, 2024
+   :tags: Conferences
+   :author: Pierre Raybaut
+
+PyData Paris 2024: My First Sponsoring Experience
+=================================================
+
+This September, I attended `PyData Paris 2024 <https://pydata.org/paris2024/>`_, a conference dedicated to data science and machine learning with Python (and friends). The conference was held at the `Cité des Sciences et de l'Industrie <https://www.cite-sciences.fr/fr/accueil/>`_ in Paris (France 🇫🇷).
+
+.. figure:: 003-pydataparis2024-01.jpg
+   :alt: PyData Paris 2024
+
+   PyData Paris 2024, 25-26 September 2024, at the Cité des Sciences et de l'Industrie
+
+The conference was organized by `QuantStack <https://quantstack.net/>`_, a French scientific computing company that is also behind the `Jupyter <https://jupyter.org/>`_ project. The event was a great opportunity to meet with the data science community and to learn about the latest developments in the field.
+
+Codra at PyData Paris 2024
+--------------------------
+
+`Codra <https://codra.net/>`_ was one of the Gold sponsors of the conference. So, as Codra's CTO, I had the privilege to represent the company at the event.
+
+.. figure:: 003-pydataparis2024-02.jpg
+   :alt: Codra booth at PyData Paris 2024
+
+   Codra booth at PyData Paris 2024, showcasing the DataLab platform (see roll-up on the left) and the Engineering Department's activities (see roll-up on the right)
+
+We had a booth where we showcased:
+
+1. The `DataLab platform <https://datalab-platform.com>`, an open-source platform for signal and image processing with Python.
+2. The Engineering Department's activities, including the development of scientific software. The associated roll-up presented the three main activities of the department in French ("Contrôle-Commande, Systèmes d'Information métier, Logiciels scientifiques" which stands for "Control Systems, Business Information Systems, Scientific Software" in English) because we are mostly working with French-speaking customers.
+
+.. note::
+
+    `Codra <https://codra.net/>`_ is a French company that specializes in industrial and scientific computing (control systems, specialized IT solutions, scientific software, etc.), and is also the company behind the Panorama Suite (Supervisory Control And Data Acquisition software and other related products).
+
+DataLab at PyData Paris 2024
+----------------------------
+
+Apart from the Codra booth, I also gave `a talk about the DataLab platform <https://pretalx.com/pydata-paris-2024/talk/WTDVCC/>`_ at the conference.
+
+.. figure:: 003-pydataparis2024-03.jpg
+   :width: 70%
+   :alt: DataLab platform
+
+   DataLab platform
+
+The main purpose of the talk was to introduce the platform to the community and to show how it can be used for signal and image processing tasks.
+
+Focus of the talk was on the following topics:
+
+- The main features, key strengths, and use cases of the platform.
+- The extensibility of the platform through plugins.
+- The validation of the platform through functional and technical approaches.
+- Examples of production use cases.
+
+The talk as well as the discussions around the booth were quite fruitful, and I had the opportunity to meet with many interesting people from the community.
+
+Some talks I attended
+---------------------
+
+The conference was mainly focused on AI, as any other data science conference these days. Unfortunately, many use cases were not really relevant to the field I am working in, that is, industrial sector or scientific computing in confidential environments (which are not quite compatible with cloud computing based solutions) - even if manageable on-premise solutions were sometimes mentioned.
+
+.. figure:: 003-pydataparis2024-04.jpg
+   :alt: PyData Paris 2024
+
+   PyData Paris 2024
+
+However, I attended some very interesting talks:
+
+- `Python 3.12's new monitoring and debugging API <https://pretalx.com/pydata-paris-2024/talk/ZQTCPC/>`_ by Johannes Bechberger. Everything is in the title: Python 3.12 introduces a new API for monitoring and debugging, with a performance impact that is promising for the future. Johannes presented the new `sys.monitoring <https://docs.python.org/3/library/sys.monitoring.html>`_ module and the performance improvements that can be expected from it. For debugging purposes, this new API has a very small execution time overhead compared to debugging with `sys.settrace <https://docs.python.org/3/library/sys.html#sys.settrace>`_ function. Even if `pdb` won't benefit from this new API (apparently, it would be impossible to retrofit it), it will be a game changer for the future of Python debugging (IDEs are still to be updated to take advantage of it, some of them already implement the new API).
+
+- `High Performance Data Visualization for the Web <https://pretalx.com/pydata-paris-2024/talk/3NDDQC/>`_ by Tim Paine. Tim presented the `Perspective <https://perspective.finos.org/>`_ component which is a high-performance data visualization library for the web. The library is written in C++ and compiled to WebAssembly, which allows it to run in the browser with near-native performance. The library is also compatible with Python through the `perspective-python <https://perspective-python.readthedocs.io/>`_ package. Demos were very impressive, showing how the library can handle millions of data points in real-time. This is definitely a library to keep an eye on for high-performance data visualization on the web.
+
+- `Elevating Data Stories: Exploring Quarto Dashboard for impactful and visual communication <https://pretalx.com/pydata-paris-2024/talk/XKGQXH/>`_ by Christophe Dervieux. Christophe presented the `Quarto <https://quarto.org/>`_ publishing system, through all its capabilities for creating PDF reports, dashboards, or books. This is a very powerful tool for creating shareable content: presentations, reports, websites, etc. The tool is based on Markdown and Jupyter notebooks, and also leverages the `Pandoc <https://pandoc.org/>`_ document converter with a lot of customizations.
+
+- `Solara: Pure Python web apps beyond prototypes and dashboards <https://pretalx.com/pydata-paris-2024/talk/DFAEZ7/>`_ by Iisakki Rotko. Iisakki presented `Solara <https://solara.dev/>`_, a pure Python framework for building web applications. The framework mostly leverages the `ipywidgets <https://ipywidgets.readthedocs.io/>`_ library for creating interactive widgets in Jupyter notebooks, and the `Reacton <https://reacton.solara.dev/>`_ library. The framework is designed to be easy to use and to allow for the creation of complex web applications with minimal effort. Demos were pretty convincing and showed that the framework is mature enough to be used in production. I'm looking forward to trying it out for future projects.
+
+- `Bridging the worlds: pixi reimplements pip and conda in Rust <https://pretalx.com/pydata-paris-2024/talk/WTXRDB/>`_ by Nichita Morcotilo. Nichita presented `pixi <https://prefix.dev/>`, a package manager written in Rust that aims to be somewhat universal, by supporting not only Python packages but also Rust, C++, and other languages. Apart from the superior performance, one of the main advantages of pixi is that it allows for the deployment of packages or applications in a very compartmentalized way. Being based on Conda and interoperable with pip, it is a very good replacement for your current package management workflow. Moreover, it allows to deploy reproducing environments in a very efficient way (e.g. thanks to the support of lock files). Let's adopt it!
+
+- `Unveiling Mamba 2.0: The Future of Fast Package Management <https://pretalx.com/pydata-paris-2024/talk/837ZAH/>`_ by Johan Mabille and Julien Jerphanion. This interesting talk presented the history of the Mamba package manager and the new features that are available in version 2.0... which was released live during the talk! (very original and daring!).
+
+- `Color-composite images from the James Webb Space Telescope <https://pretalx.com/pydata-paris-2024/talk/SNLQWH/>`_ by Jesse Averbukh.
+
+- `Visualization of the sky in Notebooks: the ipyaladin widget extension <https://pretalx.com/pydata-paris-2024/talk/CVA9XR/>`_ by Matthieu Baumann and Manon Marchand.
+
+- `Open Source Sustainability & Philanthropy: Building Contributor Communities <https://pretalx.com/pydata-paris-2024/talk/YVFJFF/>`_ by Alyssa Wright and Devpriya Dave.
+
+- `Processing medical images at scale on the cloud <https://pretalx.com/pydata-paris-2024/talk/QWXJTN/>`_ by Guillaume Desforges.
