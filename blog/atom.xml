@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://pierreraybaut.github.io/</id>
   <title>Pierre Raybaut Blog</title>
-  <updated>2026-01-20T17:59:11.643141+00:00</updated>
+  <updated>2026-01-20T18:02:33.034864+00:00</updated>
   <link href="https://pierreraybaut.github.io/"/>
   <link href="https://pierreraybaut.github.io/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
@@ -13,11 +13,11 @@
     <author>
       <name>Pierre Raybaut</name>
     </author>
-    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;&amp;gt; I started writing this post in October 2024, just after my talk at SciPy 2024, but I only finished it in January 2026. Better late than never!&lt;/p&gt;
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;&lt;em&gt;I started writing this post in October 2024, just after my talk at SciPy 2024, but I only finished it in January 2026. Better late than never!&lt;/em&gt;&lt;/p&gt;
 &lt;/p&gt;
 </content>
     <link href="https://pierreraybaut.github.io/blog/004-spyder-origins/"/>
-    <summary>&gt; I started writing this post in October 2024, just after my talk at SciPy 2024, but I only finished it in January 2026. Better late than never!</summary>
+    <summary>I started writing this post in October 2024, just after my talk at SciPy 2024, but I only finished it in January 2026. Better late than never!</summary>
     <category term="Spyder" label="Spyder"/>
     <published>2026-01-20T00:00:00+01:00</published>
   </entry>

@@ -5,7 +5,7 @@
 Spyder's Origins
 ================
 
-> I started writing this post in October 2024, just after my talk at SciPy 2024, but I only finished it in January 2026. Better late than never!
+*I started writing this post in October 2024, just after my talk at SciPy 2024, but I only finished it in January 2026. Better late than never!*
 
 How did Spyder come to be? What were the motivations behind its creation? In this post, I will answer these questions and more.
 
@@ -89,7 +89,7 @@ That's why I decided to create a new distribution from scratch, named `Python(x,
 
 It was just a few months after I even heard about Python that I started developing this distribution. It was a crazy idea, but it was the only way to make Python accessible to non-experts. And it was a great success.
 
-> 💡 Talking about crazyness, when I look back to this period, it was a bold move to start such a distribution project simply because there was nothing comparable at the time. Actually, this is kind of a pattern for me as I did the exact same thing for the IDE and other projects.
+💡 *Talking about crazyness, when I look back to this period, it was a bold move to start such a distribution project simply because there was nothing comparable at the time. Actually, this is kind of a pattern for me as I did the exact same thing for the IDE and other projects.*
 
 `Python(x,y) <https://python-xy.github.io/>`_ was a great way of promoting Python for Windows users, and of sharing my work with the community on the matter of library selection - that was (and still is) an underestimated aspect of the work behind a distribution. Distributing packages means making choices (to avoid conflicts, redundancies, etc.), and it also means testing, documenting, and maintaining packages. It was a lot of work, but it was worth it.
 
@@ -183,7 +183,7 @@ The very same logo was used until Spyder 5, that is for more than 10 years. In 2
 
    Spyder 5 Logo
 
-> ℹ️ For the record, I was not involved in the design of the new logo, as I had left the Spyder project a few years earlier. And when Carlos Cordoba (the current lead maintainer of Spyder) asked me for my opinion on the new logo, I was very reluctant at first - I was attached to the old logo, and I was not sure that a new logo was necessary. Then, after a while, I realized that the new logo was a great improvement, and I fully supported the change. Maybe a part of me was not ready to let go of Spyder, after all these years of involvement in the project...
+ℹ️ *For the record, I was not involved in the design of the new logo, as I had left the Spyder project a few years earlier. And when Carlos Cordoba (the current lead maintainer of Spyder) asked me for my opinion on the new logo, I was very reluctant at first - I was attached to the old logo, and I was not sure that a new logo was necessary. Then, after a while, I realized that the new logo was a great improvement, and I fully supported the change. Maybe a part of me was not ready to let go of Spyder, after all these years of involvement in the project...*
 
 Conclusion
 ----------
