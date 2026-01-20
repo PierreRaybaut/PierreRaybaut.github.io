@@ -598,7 +598,7 @@ document.write(`
 frameborder="0" allowfullscreen></iframe><section id="first-contact-with-python">
 <h2>First contact with Python<a class="headerlink" href="#first-contact-with-python" title="Link to this heading">#</a></h2>
 <p>In 2007, I joined the <a class="reference external" href="https://www.cea.fr/">CEA</a> (the French Alternative Energies and Atomic Energy Commission) as a research engineer. The team I worked with was using <a class="reference external" href="https://www.mathworks.com/products/matlab.html">MATLAB</a> for scientific computing.
-I was already quite familiar with MATLAB as it was the main tool used by students in my engineering school (SupOptique), but I had much experience with <a class="reference external" href="https://www.wolfram.com/mathematica/">Mathematica</a> at that time, following the research work I did during my PhD (2000-2003, on spectrally resolved numerical simulations of regenerative laser amplifiers).
+I was already quite familiar with MATLAB as it was the main tool used by students in my engineering school (SupOptique), but I had more experience with <a class="reference external" href="https://www.wolfram.com/mathematica/">Mathematica</a> at that time, following the research work I did during my PhD (2000-2003, on spectrally resolved numerical simulations of regenerative laser amplifiers).
 Anyway, MATLAB was at the center of the team’s workflow ; we used it for device control, data acquisition, data processing, and visualization. MATLAB was both used as an interactive environment for R&amp;D activities and as a platform for developing applications that were used by the team and by external users. For the latter, we used the MATLAB Compiler to create standalone applications that could be run without a MATLAB license on field computers dedicated to experiments. As those applications were used by non-experts, we had to provide a user-friendly interface, which was usually done using the MATLAB standard GUI features.</p>
 <p>For R&amp;D, MATLAB was and still is a great tool - let’s forget about the commercial aspects, or the proprietary nature of the language. It has tons of built-in functions, it is shipped with a powerful IDE, documentation is excellent, and the community is quite active. But, and it’s a big but, it was not suitable for developing applications that were to be used by non-experts. MATLAB’s GUI features were quite limited, and the applications we developed were not very user-friendly, not robust at all, and not reliable.</p>
 <p>I remember a specific training session, in Autumn 2007, gathering all the team members and the non-expert users of our applications. We were testing the applications on the field computers with our cutting-edge scientific instruments, and it was a disaster. The applications were crashing, freezing, or not behaving as expected. I was particularly embarrassed because I was responsible for the software development part of the project. That was the turning point for me. I was convinced that there was a better way to develop applications, and I started looking for alternatives.</p>
@@ -612,12 +612,12 @@ Anyway, MATLAB was at the center of the team’s workflow ; we used it for devic
 <li><p><a class="reference external" href="https://www.ruby-lang.org/">Ruby</a> was another good candidate, but the lack of scientific libraries was a showstopper.</p></li>
 <li><p><a class="reference external" href="https://www.python.org/">Python</a> was the perfect compromise. It was concise, readable, and had a large standard library. It was also easy to learn and to teach. But, at that time, it was not as popular as it is today, and it was not as powerful as MATLAB for scientific computing. However, I was convinced that it was the right choice for developing applications that were to be used by non-experts.</p></li>
 </ul>
-<p>After a careful evaluation of the alternatives, including discussions with a Python expert of another Department at the CEA (High Performance Computing, where Python was already used but for very different purposes: mainly preprocessing and postprocessing of simulation data, on Linux), I submitted a proposal to the Head of the Laboratory to switch from MATLAB to Python for developing applications. The proposal was accepted despite the fact that I was the only one in a 300-people Departement to know Python (and I was not an expert at all), and that I clearly stated that it would mean to stop releasing new applications for 1 to 2 years - in retrospect, it was a very bold move, and I was very glad for the vote of confidence from the Head of the Laboratory.</p>
+<p>After a careful evaluation of the alternatives, including discussions with a Python expert of another Department at the CEA (High Performance Computing, where Python was already used but for very different purposes: mainly preprocessing and postprocessing of simulation data, on Linux), I submitted a proposal to the Head of the Laboratory to switch from MATLAB to Python for developing applications. The proposal was accepted despite the fact that I was the only one in a 300-people Department to know Python (and I was not an expert at all), and that I clearly stated that it would mean to stop releasing new applications for 1 to 2 years - in retrospect, it was a very bold move, and I was very glad for the vote of confidence from the Head of the Laboratory.</p>
 <p>However, in 2007, Python was not as accessible as it is today. There was no ready-to-use integrated environment like MATLAB. Choosing the right GUI library was not as straightforward as it is today, and scientific libraries were not as full-fledged as they are today. So, there were a lot of challenges to overcome…</p>
 </section>
 <section id="about-python-libraries">
 <h2>About Python libraries<a class="headerlink" href="#about-python-libraries" title="Link to this heading">#</a></h2>
-<p>Coming from the MATLAB world, the Python language itself and its standard library was so intellectually refreshing. Everything seems more natural and more consistent. Possibilities were endless.</p>
+<p>Coming from the MATLAB world, the Python language itself and its standard library was so intellectually refreshing. Everything seemed more natural and more consistent. Possibilities were endless.</p>
 <p>For scientific computing, <a class="reference external" href="https://numpy.org/">NumPy</a> and <a class="reference external" href="https://www.scipy.org/">SciPy</a> were delivering the basics - some functions were missing, but this was the opportunity to learn that it was extremely easy to write C/C++ extensions (or even simpler: Fortran extensions, thanks to <a class="reference external" href="https://numpy.org/doc/stable/f2py/">f2py</a>). In other words, there was no blocking issue, only opportunities to learn new things, in a very stimulating environment. And, as a bonus, the community was very active and very helpful.</p>
 <p>For graphical user interfaces, the choice was not as obvious as it is today for desktop applications. <a class="reference external" href="https://docs.python.org/3/library/tkinter.html">Tkinter</a> was the standard GUI library, but it was not as powerful as <a class="reference external" href="https://www.riverbankcomputing.com/software/pyqt/intro">PyQt</a>. There was also <a class="reference external" href="https://www.wxpython.org/">wxPython</a>, but the code was terrible to read and was not as robust as PyQt. Another alternative was <a class="reference external" href="https://pygobject.readthedocs.io/en/latest/">PyGTK</a>, but it was not as portable as PyQt: support was great on Linux, but not on Windows (our main target). So, the choice was clear: PyQt was the way to go. History proved us right: Qt is still the best choice for desktop applications in Python.</p>
 <p>For data visualization, the landscape was obviously quite different as it is today but, actually, the situation is not that different for desktop applications (web applications were almost non-existent at that time):</p>
@@ -644,7 +644,7 @@ Anyway, MATLAB was at the center of the team’s workflow ; we used it for devic
 <p>The equivalent for Python was not as straightforward. There was only one distribution that was close to what we were looking for, and it was <a class="reference external" href="https://www.enthought.com/product/enthought-python-distribution/">Enthought Python Distribution</a> (EPD). It was a commercial distribution, but it was the only one that was providing a complete environment for scientific computing. It was also shipped with <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>, <a class="reference external" href="https://numpy.org/">NumPy</a>, <a class="reference external" href="https://www.scipy.org/">SciPy</a>, <a class="reference external" href="https://www.riverbankcomputing.com/software/pyqt/intro">PyQt</a>, and many other libraries. It was a great distribution, but it was not free, and it was not open-source. And, more importantly, it was not a real all-in-one solution for Windows users: it was not providing a good IDE, and it was not providing a good documentation system, nor a good integration in the Windows environment.</p>
 <p>That’s why I decided to create a new distribution from scratch, named <a class="reference external" href="https://python-xy.github.io/">Python(x,y)</a>. The idea was to provide a free and open-source distribution that would be as close as possible to the MATLAB environment. The distribution was first shipped with <a class="reference external" href="https://www.eclipse.org/">Eclipse</a> and <a class="reference external" href="https://www.pydev.org/">Pydev</a> for the IDE (in 2008), and later with <a class="reference external" href="https://www.spyder-ide.org/">Spyder</a> (starting from 2009).</p>
 <p>It was just a few months after I even heard about Python that I started developing this distribution. It was a crazy idea, but it was the only way to make Python accessible to non-experts. And it was a great success.</p>
-<p>💡 <em>Talking about crazyness, when I look back to this period, it was a bold move to start such a distribution project simply because there was nothing comparable at the time. Actually, this is kind of a pattern for me as I did the exact same thing for the IDE and other projects.</em></p>
+<p>💡 <em>Talking about craziness, when I look back to this period, it was a bold move to start such a distribution project simply because there was nothing comparable at the time. Actually, this is kind of a pattern for me as I did the exact same thing for the IDE and other projects.</em></p>
 <p><a class="reference external" href="https://python-xy.github.io/">Python(x,y)</a> was a great way of promoting Python for Windows users, and of sharing my work with the community on the matter of library selection - that was (and still is) an underestimated aspect of the work behind a distribution. Distributing packages means making choices (to avoid conflicts, redundancies, etc.), and it also means testing, documenting, and maintaining packages. It was a lot of work, but it was worth it.</p>
 <p>However, a few years later, <a class="reference external" href="https://python-xy.github.io/">Python(x,y)</a> was discontinued because of the technical difficulties of maintaining it. Initially, the distribution was based on quick and dirty scripts that were not scalable. Maintaining it for a single Python version (2.7, 32-bit) was already a lot of work, but maintaining it for multiple Python versions (2.7, 3.4, 32-bit, 64-bit) was impossible.</p>
 <p>That’s why, in 2012, I created a new distribution named <a class="reference external" href="https://winpython.github.io/">WinPython</a>. The idea was to provide a portable, lightweight distribution that would be easy to install, easy to use, easy to maintain, and capable of deploying multiple Python versions side by side.
@@ -664,20 +664,20 @@ The distribution was shipped with <a class="reference external" href="https://ww
 <ul class="simple">
 <li><p>I remember that I was missing a MATLAB-like variable explorer, so I developed one. First, I wrote a NumPy array editor based on <a class="reference external" href="https://www.riverbankcomputing.com/software/pyqt/intro">PyQt</a> (this is still the widget used in <a class="reference external" href="https://www.spyder-ide.org/">Spyder</a> for editing NumPy arrays), because viewing image data in a text editor was not very convenient. Then, I wrote a simple variable explorer that was able to display the content of the current namespace. One at a time, I added support for all the basic Python types (int, float, str, list, tuple, dict, etc.). It was a very simple widget, but a huge step forward for my workflow: viewing and editing variables in a GUI was far more efficient than using the console (not only you have an instant overview of the data, but you can also edit it in a more user-friendly way).</p></li>
 </ul>
-<figure class="align-default" id="id29">
+<figure class="align-default" id="id30">
 <img alt="Array editor in Spyder" src="../../_images/004-spyder-origins-array_editor.png" />
 <figcaption>
-<p><span class="caption-text">Array editor in Spyder</span><a class="headerlink" href="#id29" title="Link to this image">#</a></p>
+<p><span class="caption-text">Array editor in Spyder</span><a class="headerlink" href="#id30" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
 <li><p>Then, I developed a Qt-based interactive console. The idea was to create an extension to <a class="reference external" href="https://www.riverbankcomputing.com/software/pyqt/intro">PyQt</a> that would provide a console application based on independent widgets interacting with each other. The project was named <cite>PyQtShell</cite>: my original post on PyQt mailing list is still available <a class="reference external" href="https://riverbankcomputing.com/pipermail/pyqt/2009-January/021424.html">here</a>. The main component was <cite>QShell</cite>, a Python shell with useful options (like a ‘-os’ switch for importing os and os.path as osp, a ‘-pylab’ switch for importing matplotlib in interactive mode, and so on) and advanced features like code completion based on <a class="reference external" href="https://www.riverbankcomputing.com/software/qscintilla/intro">QScintilla</a>. I also implemented a <cite>CurrentDirChanger</cite> widget that showed the current directory and allowed to change it. I had plans for additional widgets like <cite>GlobalsExplorer</cite> (for showing and editing global variables), <cite>FileExplorer</cite>, <cite>CodeEditor</cite>, and others, but they were not implemented at that time. It was a very simple console application, but it was a huge step forward for my workflow: having an interactive console in a GUI with integrated widgets was far more efficient than using a terminal (not only you have syntax highlighting and code completion, but you can also integrate it with other GUI components, like the variable explorer).</p></li>
 </ul>
-<figure class="align-default" id="id30">
+<figure class="align-default" id="id31">
 <a class="reference internal image-reference" href="../../_images/004-spyder-origins-pyqtshell.png"><img alt="PyQtShell interactive console" src="../../_images/004-spyder-origins-pyqtshell.png" style="width: 70%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">PyQtShell interactive console</span><a class="headerlink" href="#id30" title="Link to this image">#</a></p>
+<p><span class="caption-text">PyQtShell interactive console</span><a class="headerlink" href="#id31" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -685,60 +685,85 @@ The distribution was shipped with <a class="reference external" href="https://ww
 </ul>
 <p>At that time, I was not thinking about creating an IDE. I was just developing components that were missing in my workflow. But, little by little, I realized that these components could be integrated into a single application, providing a smooth workflow for both R&amp;D and application development.</p>
 <p>That’s how the idea of <a class="reference external" href="https://www.spyder-ide.org/">Spyder</a> was born. I started integrating these components in early 2009: in January with PyQtShell demo 0.0.2, then adding the array editor in April, the external console in May, and the class browser in June. By July 2009, I released Pydee 0.4.23 - “Pydee” being the initial name for what was described as “a Python development environment providing MATLAB-like features in a simple and light-weighted software”. Pydee was part of pydeelib, a Python module based on PyQt4 and QScintilla2. The archived project is still available <a class="reference external" href="https://code.google.com/archive/p/pydee/">here</a>.</p>
-<figure class="align-default" id="id31">
+<figure class="align-default" id="id32">
 <a class="reference internal image-reference" href="../../_images/004-spyder-origins-pydee_splash.png"><img alt="Pydee Splash Screen" src="../../_images/004-spyder-origins-pydee_splash.png" style="width: 70%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Pydee Splash Screen (the background image is a photo taken by me at my in-laws’ - branches of an apple tree in spring time)</span><a class="headerlink" href="#id31" title="Link to this image">#</a></p>
+<p><span class="caption-text">Pydee Splash Screen (the background image is a photo taken by me at my in-laws’ - branches of an apple tree in spring time)</span><a class="headerlink" href="#id32" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In August 2009, as Pydee 1.0.0beta1 was ready for release, I renamed the project to <a class="reference external" href="https://www.spyder-ide.org/">Spyder</a> (for Scientific PYthon Development EnviRonment). Spyder 1.0.0beta1 was released on August 10, 2009, followed by beta2 on August 14, and the first stable version Spyder 1.0 was released in October 2009.</p>
-<figure class="align-default" id="id32">
+<figure class="align-default" id="id33">
 <a class="reference internal image-reference" href="../../_images/004-spyder-origins-spyder_splash.png"><img alt="Spyder 1.0 Splash Screen" src="../../_images/004-spyder-origins-spyder_splash.png" style="width: 70%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Spyder 1.0 Splash Screen (again, the background image is a photo taken by me at my in-laws’ - a spider web, with a hedge in the background)</span><a class="headerlink" href="#id32" title="Link to this image">#</a></p>
+<p><span class="caption-text">Spyder 1.0 Splash Screen (again, the background image is a photo taken by me at my in-laws’ - a spider web, with a hedge in the background)</span><a class="headerlink" href="#id33" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id33">
+<figure class="align-default" id="id34">
 <a class="reference internal image-reference" href="../../_images/004-spyder-origins-spyder_v1.png"><img alt="Spyder 1.0.0" src="../../_images/004-spyder-origins-spyder_v1.png" style="width: 70%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Spyder 1.0.0</span><a class="headerlink" href="#id33" title="Link to this image">#</a></p>
+<p><span class="caption-text">Spyder 1.0.0</span><a class="headerlink" href="#id34" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>So, Spyder started small, as a personal project to try and improve the user experience for scientific computing in Python. But, it quickly grew into a full-fledged IDE, thanks to the adoption by the community and the contributions of many users and developers. Today, Spyder is one of the most popular IDEs for scientific computing in Python, with a large user base and a vibrant community.</p>
-<figure class="align-default" id="id34">
+<figure class="align-default" id="id35">
 <a class="reference internal image-reference" href="../../_images/004-spyder-origins-spyder_contributors.png"><img alt="Spyder Contributors" src="../../_images/004-spyder-origins-spyder_contributors.png" style="width: 70%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Spyder Contributors, from 2009 to 2024</span><a class="headerlink" href="#id34" title="Link to this image">#</a></p>
+<p><span class="caption-text">Spyder Contributors, from 2009 to 2024</span><a class="headerlink" href="#id35" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In 2012, I progressively handed over the leadership of the Spyder project to <a class="reference external" href="https://github.com/ccordoba12">Carlos Cordoba</a>. Carlos was already a major contributor to the project, and he was the perfect person to take over the leadership. Since then, Spyder has continued to evolve and improve, thanks to the dedication of Carlos and the entire Spyder team.</p>
+</div>
+</section>
+<section id="about-people">
+<h2>About people<a class="headerlink" href="#about-people" title="Link to this heading">#</a></h2>
+<p>Spyder would not be what it is today without the contributions of many people. Not only Spyder has been a <strong>tremendous technical learning experience</strong> for me, but it has also been an <strong>incredible human adventure with great encounters</strong>.</p>
+<p>Here is a non-exhaustive list of people who contributed to Spyder in its early days (2009-2014), in addition to Carlos Cordoba (who took over the leadership of the project in 2012):</p>
+<ul class="simple">
+<li><p>Ludovic Aubry (01-2009)</p></li>
+<li><p>Phil Thompson (08-2009)</p></li>
+<li><p>Alexandre Radicchi (09-2009)</p></li>
+<li><p>Tim Michelsen (09-2009)</p></li>
+<li><p>Frédéric Picca (11-2010)</p></li>
+<li><p><a class="reference external" href="https://github.com/ccordoba12">Carlos Córdoba</a> (12-2010)</p></li>
+<li><p><a class="reference external" href="https://www.linkedin.com/in/jedludlow/">Jed Ludlow</a> (01-2012)</p></li>
+<li><p><a class="reference external" href="https://github.com/sylvaincorlay">Sylvain Corlay</a> (01-2014)</p></li>
+</ul>
+<p>And more recently, I had the pleasure to meet in person some of the current Spyder contributors at SciPy conferences:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/CAM-Gerlach">C.A.M. Gerlach</a> (at SciPy 2024)</p></li>
+<li><p><a class="reference external" href="https://github.com/juanis2112">Juanita Gomez</a> (also at SciPy 2024)</p></li>
+</ul>
+<p>Without them, and without all the active users who reported bugs, suggested features, and contributed to the documentation, Spyder would not be what it is today. It would have stayed as proof-of-concept software, used only by me and a few others. Because the short-term motivation for developing Spyder was to improve my own workflow (also, it was so fun to do!), but the long-term motivation was to create a tool that would be useful for the community. So, a big thank you to all of them!</p>
 </section>
 <section id="about-the-logo">
 <h2>About the logo<a class="headerlink" href="#about-the-logo" title="Link to this heading">#</a></h2>
 <p>I designed the first Spyder logo myself, in 2009, using <a class="reference external" href="https://inkscape.org/">Inkscape</a>. I wanted to create a logo that was simple, recognizable, and that conveyed the idea of a spider web (no other intended meaning than the phonetic similarity between “Spyder” and “spider”) with a Python inside.</p>
-<figure class="align-default" id="id35">
+<figure class="align-default" id="id36">
 <a class="reference internal image-reference" href="../../_images/004-spyder-origins-spyder_logo_v1.png"><img alt="Spyder 1.0 Logo" src="../../_images/004-spyder-origins-spyder_logo_v1.png" style="width: 40%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Spyder 1.0 Logo</span><a class="headerlink" href="#id35" title="Link to this image">#</a></p>
+<p><span class="caption-text">Spyder 1.0 Logo</span><a class="headerlink" href="#id36" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The very same logo was used until Spyder 5, that is for more than 10 years. In 2020, for the release of Spyder 5, <a class="reference external" href="https://github.com/isabela-pf/">Isabela Presedo-Floyd</a> designed a new logo that is still used today. The idea was to keep the same concept, but to modernize the design and to make it more appealing. The new logo required a lot of iterations and discussions (see for example <a class="reference external" href="https://github.com/spyder-ide/spyder/issues/13181">this issue</a> on Spyder’s GitHub repository), but the final result is great.</p>
-<figure class="align-default" id="id36">
+<figure class="align-default" id="id37">
 <a class="reference internal image-reference" href="../../_images/004-spyder-origins-spyder_logo_v5.png"><img alt="Spyder 5 Logo" src="../../_images/004-spyder-origins-spyder_logo_v5.png" style="width: 40%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Spyder 5 Logo</span><a class="headerlink" href="#id36" title="Link to this image">#</a></p>
+<p><span class="caption-text">Spyder 5 Logo</span><a class="headerlink" href="#id37" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>ℹ️ <em>For the record, I was not involved in the design of the new logo, as I had left the Spyder project a few years earlier. And when Carlos Cordoba (the current lead maintainer of Spyder) asked me for my opinion on the new logo, I was very reluctant at first - I was attached to the old logo, and I was not sure that a new logo was necessary. Then, after a while, I realized that the new logo was a great improvement, and I fully supported the change. Maybe a part of me was not ready to let go of Spyder, after all these years of involvement in the project…</em></p>
 </section>
 <section id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
-<p>Looking back at Spyder’s origins, what started as a personal quest to find better tools for scientific application development grew into something much larger than I could have imagined. The decision to switch from MATLAB to Python in 2007 was risky - I was alone in a 300-people department advocating for a language that was far from mainstream in scientific computing. But the bet paid off, not just for my team at the CEA, but for countless scientists and engineers around the world who found in Spyder a familiar yet powerful environment for their work.</p>
+<p>Looking back at Spyder’s origins, what started as a personal quest to find better tools for scientific application development grew into something much larger than I could have imagined. The decision to switch from MATLAB to Python in 2007 was risky - I was alone in a 300-people Department advocating for a language that was far from mainstream in scientific computing. But the bet paid off, not just for my team at the CEA, but for countless scientists and engineers around the world who found in Spyder a familiar yet powerful environment for their work.</p>
 <p>Spyder’s creation was never planned as a grand project. It emerged organically from real needs: a variable explorer here, an interactive console there, a code editor with the right features. Each component was built to solve a specific problem in my daily workflow. The beauty of open source is that these personal solutions can become community tools, and Spyder became exactly that - a tool born from necessity, shaped by community feedback, and refined through years of collective effort.</p>
 <p>Today, Spyder has far outgrown my initial contributions. Under the leadership of Carlos Cordoba and the dedication of the current team and contributors, it continues to evolve and adapt to the changing landscape of scientific computing. While I’ve moved on to other projects like <a class="reference external" href="https://datalab-platform.com">DataLab</a>, I’m proud of what we built together and grateful for the community that embraced it. Spyder proved that with the right tools, Python could not only match MATLAB for scientific work - it could surpass it.</p>
 </section>
@@ -802,6 +827,7 @@ The distribution was shipped with <a class="reference external" href="https://ww
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-python-libraries">About Python libraries</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-distributions">About distributions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-ide-to-rule-them-all">One IDE to rule them all</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-people">About people</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-the-logo">About the logo</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>

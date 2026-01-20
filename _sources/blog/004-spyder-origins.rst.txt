@@ -20,7 +20,7 @@ First contact with Python
 -------------------------
 
 In 2007, I joined the `CEA <https://www.cea.fr/>`_ (the French Alternative Energies and Atomic Energy Commission) as a research engineer. The team I worked with was using `MATLAB <https://www.mathworks.com/products/matlab.html>`_ for scientific computing.
-I was already quite familiar with MATLAB as it was the main tool used by students in my engineering school (SupOptique), but I had much experience with `Mathematica <https://www.wolfram.com/mathematica/>`_ at that time, following the research work I did during my PhD (2000-2003, on spectrally resolved numerical simulations of regenerative laser amplifiers).
+I was already quite familiar with MATLAB as it was the main tool used by students in my engineering school (SupOptique), but I had more experience with `Mathematica <https://www.wolfram.com/mathematica/>`_ at that time, following the research work I did during my PhD (2000-2003, on spectrally resolved numerical simulations of regenerative laser amplifiers).
 Anyway, MATLAB was at the center of the team's workflow ; we used it for device control, data acquisition, data processing, and visualization. MATLAB was both used as an interactive environment for R&D activities and as a platform for developing applications that were used by the team and by external users. For the latter, we used the MATLAB Compiler to create standalone applications that could be run without a MATLAB license on field computers dedicated to experiments. As those applications were used by non-experts, we had to provide a user-friendly interface, which was usually done using the MATLAB standard GUI features.
 
 For R&D, MATLAB was and still is a great tool - let's forget about the commercial aspects, or the proprietary nature of the language. It has tons of built-in functions, it is shipped with a powerful IDE, documentation is excellent, and the community is quite active. But, and it's a big but, it was not suitable for developing applications that were to be used by non-experts. MATLAB's GUI features were quite limited, and the applications we developed were not very user-friendly, not robust at all, and not reliable.
@@ -43,14 +43,14 @@ At that time, at the end of 2007, here is what I found:
 
 - `Python <https://www.python.org/>`_ was the perfect compromise. It was concise, readable, and had a large standard library. It was also easy to learn and to teach. But, at that time, it was not as popular as it is today, and it was not as powerful as MATLAB for scientific computing. However, I was convinced that it was the right choice for developing applications that were to be used by non-experts.
 
-After a careful evaluation of the alternatives, including discussions with a Python expert of another Department at the CEA (High Performance Computing, where Python was already used but for very different purposes: mainly preprocessing and postprocessing of simulation data, on Linux), I submitted a proposal to the Head of the Laboratory to switch from MATLAB to Python for developing applications. The proposal was accepted despite the fact that I was the only one in a 300-people Departement to know Python (and I was not an expert at all), and that I clearly stated that it would mean to stop releasing new applications for 1 to 2 years - in retrospect, it was a very bold move, and I was very glad for the vote of confidence from the Head of the Laboratory.
+After a careful evaluation of the alternatives, including discussions with a Python expert of another Department at the CEA (High Performance Computing, where Python was already used but for very different purposes: mainly preprocessing and postprocessing of simulation data, on Linux), I submitted a proposal to the Head of the Laboratory to switch from MATLAB to Python for developing applications. The proposal was accepted despite the fact that I was the only one in a 300-people Department to know Python (and I was not an expert at all), and that I clearly stated that it would mean to stop releasing new applications for 1 to 2 years - in retrospect, it was a very bold move, and I was very glad for the vote of confidence from the Head of the Laboratory.
 
 However, in 2007, Python was not as accessible as it is today. There was no ready-to-use integrated environment like MATLAB. Choosing the right GUI library was not as straightforward as it is today, and scientific libraries were not as full-fledged as they are today. So, there were a lot of challenges to overcome...
 
 About Python libraries
 ----------------------
 
-Coming from the MATLAB world, the Python language itself and its standard library was so intellectually refreshing. Everything seems more natural and more consistent. Possibilities were endless.
+Coming from the MATLAB world, the Python language itself and its standard library was so intellectually refreshing. Everything seemed more natural and more consistent. Possibilities were endless.
 
 For scientific computing, `NumPy <https://numpy.org/>`_ and `SciPy <https://www.scipy.org/>`_ were delivering the basics - some functions were missing, but this was the opportunity to learn that it was extremely easy to write C/C++ extensions (or even simpler: Fortran extensions, thanks to `f2py <https://numpy.org/doc/stable/f2py/>`_). In other words, there was no blocking issue, only opportunities to learn new things, in a very stimulating environment. And, as a bonus, the community was very active and very helpful.
 
@@ -89,7 +89,7 @@ That's why I decided to create a new distribution from scratch, named `Python(x,
 
 It was just a few months after I even heard about Python that I started developing this distribution. It was a crazy idea, but it was the only way to make Python accessible to non-experts. And it was a great success.
 
-💡 *Talking about crazyness, when I look back to this period, it was a bold move to start such a distribution project simply because there was nothing comparable at the time. Actually, this is kind of a pattern for me as I did the exact same thing for the IDE and other projects.*
+💡 *Talking about craziness, when I look back to this period, it was a bold move to start such a distribution project simply because there was nothing comparable at the time. Actually, this is kind of a pattern for me as I did the exact same thing for the IDE and other projects.*
 
 `Python(x,y) <https://python-xy.github.io/>`_ was a great way of promoting Python for Windows users, and of sharing my work with the community on the matter of library selection - that was (and still is) an underestimated aspect of the work behind a distribution. Distributing packages means making choices (to avoid conflicts, redundancies, etc.), and it also means testing, documenting, and maintaining packages. It was a lot of work, but it was worth it.
 
@@ -164,6 +164,33 @@ So, Spyder started small, as a personal project to try and improve the user expe
 
    Spyder Contributors, from 2009 to 2024
 
+.. note::
+
+   In 2012, I progressively handed over the leadership of the Spyder project to `Carlos Cordoba <https://github.com/ccordoba12>`_. Carlos was already a major contributor to the project, and he was the perfect person to take over the leadership. Since then, Spyder has continued to evolve and improve, thanks to the dedication of Carlos and the entire Spyder team.
+
+About people
+------------
+
+Spyder would not be what it is today without the contributions of many people. Not only Spyder has been a **tremendous technical learning experience** for me, but it has also been an **incredible human adventure with great encounters**.
+
+Here is a non-exhaustive list of people who contributed to Spyder in its early days (2009-2014), in addition to Carlos Cordoba (who took over the leadership of the project in 2012):
+
+- Ludovic Aubry (01-2009)
+- Phil Thompson (08-2009)
+- Alexandre Radicchi (09-2009)
+- Tim Michelsen (09-2009)
+- Frédéric Picca (11-2010)
+- `Carlos Córdoba <https://github.com/ccordoba12>`_ (12-2010)
+- `Jed Ludlow <https://www.linkedin.com/in/jedludlow/>`_ (01-2012)
+- `Sylvain Corlay <https://github.com/sylvaincorlay>`_ (01-2014)
+
+And more recently, I had the pleasure to meet in person some of the current Spyder contributors at SciPy conferences:
+
+- `C.A.M. Gerlach <https://github.com/CAM-Gerlach>`_ (at SciPy 2024)
+- `Juanita Gomez <https://github.com/juanis2112>`_ (also at SciPy 2024)
+
+Without them, and without all the active users who reported bugs, suggested features, and contributed to the documentation, Spyder would not be what it is today. It would have stayed as proof-of-concept software, used only by me and a few others. Because the short-term motivation for developing Spyder was to improve my own workflow (also, it was so fun to do!), but the long-term motivation was to create a tool that would be useful for the community. So, a big thank you to all of them!
+
 About the logo
 --------------
 
@@ -188,7 +215,7 @@ The very same logo was used until Spyder 5, that is for more than 10 years. In 2
 Conclusion
 ----------
 
-Looking back at Spyder's origins, what started as a personal quest to find better tools for scientific application development grew into something much larger than I could have imagined. The decision to switch from MATLAB to Python in 2007 was risky - I was alone in a 300-people department advocating for a language that was far from mainstream in scientific computing. But the bet paid off, not just for my team at the CEA, but for countless scientists and engineers around the world who found in Spyder a familiar yet powerful environment for their work.
+Looking back at Spyder's origins, what started as a personal quest to find better tools for scientific application development grew into something much larger than I could have imagined. The decision to switch from MATLAB to Python in 2007 was risky - I was alone in a 300-people Department advocating for a language that was far from mainstream in scientific computing. But the bet paid off, not just for my team at the CEA, but for countless scientists and engineers around the world who found in Spyder a familiar yet powerful environment for their work.
 
 Spyder's creation was never planned as a grand project. It emerged organically from real needs: a variable explorer here, an interactive console there, a code editor with the right features. Each component was built to solve a specific problem in my daily workflow. The beauty of open source is that these personal solutions can become community tools, and Spyder became exactly that - a tool born from necessity, shaped by community feedback, and refined through years of collective effort.
 
