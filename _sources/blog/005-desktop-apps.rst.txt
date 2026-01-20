@@ -1,4 +1,4 @@
-.. post:: Oct 15, 2024
+.. post:: Dec 15, 2026
     :tags: Desktop Apps, Python, Qt
     :author: Pierre Raybaut
 

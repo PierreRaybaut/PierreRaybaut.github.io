@@ -1,0 +1,866 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Spyder’s Origins &#8212; Pierre Raybaut</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=187304be"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'blog/004-spyder-origins';</script>
+    <link rel="canonical" href="https://pierreraybaut.github.io/blog/004-spyder-origins/" />
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="Pierre Raybaut Blog"
+/>
+
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/PierreRaybaut-banner-light.png" class="logo__image only-light" alt="Pierre Raybaut - Home"/>
+    <script>document.write(`<img src="../../_static/PierreRaybaut-banner-dark.png" class="logo__image only-dark" alt="Pierre Raybaut - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../about/">
+    About me
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../license/">
+    Licensing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PierreRaybaut" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/pierre-raybaut/" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/pierreraybaut" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://fosstodon.org/@pierre_raybaut" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Mastodon</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../about/">
+    About me
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../license/">
+    Licensing
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/PierreRaybaut" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/pierre-raybaut/" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/pierreraybaut" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://fosstodon.org/@pierre_raybaut" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Mastodon</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  <span>janv. 20, 2026</span>
+  
+</h2>
+<ul>
+  <div class="ablog-sidebar-item ablog__postcard2">
+
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
+    
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../author/pierre-raybaut/">Pierre Raybaut</a>
+  
+  
+  
+</li>
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tag"></i>
+    
+    </span>
+  
+  
+  <a href="../tag/spyder/">Spyder</a>
+  
+  
+  
+</li>
+
+
+</div>
+</ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__recentposts">
+<h3>
+  <a href="../">Recent Posts</a>
+</h3>
+<ul>
+  
+  
+  <li>
+    <a href="../003-pydataparis2024/">
+      sept. 26, 2024 - PyData Paris 2024: My First Sponsoring Experience
+    </a>
+  </li>
+  
+  <li>
+    <a href="../002-scipy2024/">
+      juil. 20, 2024 - SciPy 2024: My first SciPy conference
+    </a>
+  </li>
+  
+  <li>
+    <a href="../001-why/">
+      juil. 14, 2024 - Why Write a Blog?
+    </a>
+  </li>
+  
+</ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__tags">
+<link rel="stylesheet" href="../../_static/ablog/tagcloud.css" type="text/css" />
+<h3><a href="../tag/">Tags</a></h3>
+<ul class="ablog-cloud">
+  
+  
+  <li class="ablog-cloud ablog-cloud-5">
+    <a href="../tag/conferences/">Conferences</a>
+  </li>
+  
+  
+  
+  
+  
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="../tag/general/">General</a>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+  <li class="ablog-cloud ablog-cloud-1">
+    <a href="../tag/spyder/">Spyder</a>
+  </li>
+  
+  
+</ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__archive">
+<h3>
+  <a href="../archive/">Archives</a>
+</h3>
+<ul>
+  
+  
+  <li>
+    <a href="../2026/">2026 (1)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../2024/">2024 (3)</a>
+  </li>
+  
+  
+</ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Spyder’s Origins</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+<section id="spyder-s-origins">
+<h1>Spyder’s Origins<a class="headerlink" href="#spyder-s-origins" title="Link to this heading">#</a></h1>
+<p>&gt; I started writing this post in October 2024, just after my talk at SciPy 2024, but I only finished it in January 2026. Better late than never!</p>
+<p>How did Spyder come to be? What were the motivations behind its creation? In this post, I will answer these questions and more.</p>
+<p>This post is basically the long textual version of the talk I gave at the <a class="reference external" href="https://www.scipy2024.scipy.org/">SciPy 2024</a> conference (see my post <a class="reference internal" href="../002-scipy2024/#002-scipy2024"><span class="std std-ref">SciPy 2024: My first SciPy conference</span></a>). The talk was entitled “From Spyder to DataLab: 15 years of scientific software crafting in Python” and was part of the “General” track:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MKPUuV1LEqk"
+frameborder="0" allowfullscreen></iframe><section id="first-contact-with-python">
+<h2>First contact with Python<a class="headerlink" href="#first-contact-with-python" title="Link to this heading">#</a></h2>
+<p>In 2007, I joined the <a class="reference external" href="https://www.cea.fr/">CEA</a> (the French Alternative Energies and Atomic Energy Commission) as a research engineer. The team I worked with was using <a class="reference external" href="https://www.mathworks.com/products/matlab.html">MATLAB</a> for scientific computing.
+I was already quite familiar with MATLAB as it was the main tool used by students in my engineering school (SupOptique), but I had much experience with <a class="reference external" href="https://www.wolfram.com/mathematica/">Mathematica</a> at that time, following the research work I did during my PhD (2000-2003, on spectrally resolved numerical simulations of regenerative laser amplifiers).
+Anyway, MATLAB was at the center of the team’s workflow ; we used it for device control, data acquisition, data processing, and visualization. MATLAB was both used as an interactive environment for R&amp;D activities and as a platform for developing applications that were used by the team and by external users. For the latter, we used the MATLAB Compiler to create standalone applications that could be run without a MATLAB license on field computers dedicated to experiments. As those applications were used by non-experts, we had to provide a user-friendly interface, which was usually done using the MATLAB standard GUI features.</p>
+<p>For R&amp;D, MATLAB was and still is a great tool - let’s forget about the commercial aspects, or the proprietary nature of the language. It has tons of built-in functions, it is shipped with a powerful IDE, documentation is excellent, and the community is quite active. But, and it’s a big but, it was not suitable for developing applications that were to be used by non-experts. MATLAB’s GUI features were quite limited, and the applications we developed were not very user-friendly, not robust at all, and not reliable.</p>
+<p>I remember a specific training session, in Autumn 2007, gathering all the team members and the non-expert users of our applications. We were testing the applications on the field computers with our cutting-edge scientific instruments, and it was a disaster. The applications were crashing, freezing, or not behaving as expected. I was particularly embarrassed because I was responsible for the software development part of the project. That was the turning point for me. I was convinced that there was a better way to develop applications, and I started looking for alternatives.</p>
+<p>At that time, at the end of 2007, here is what I found:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.scilab.org/">Scilab</a> was interesting but - in 2007 - it was not as powerful as MATLAB for scientific computing, and, at the same time, it had all the drawbacks of MATLAB for application development. <a class="reference external" href="https://www.gnu.org/software/octave/">Octave</a> was not an option for similar reasons.</p></li>
+<li><p><a class="reference external" href="https://www.harrisgeospatial.com/Software-Technology/IDL">IDL</a> was an appealing solution at first sight because of its powerful image processing and visualization capabilities (which were more advanced than MATLAB’s at that time). But, like MATLAB, it was not suitable for developing production applications (and also, the language was really dated).</p></li>
+<li><p><a class="reference external" href="https://www.java.com/">Java</a> was a good candidate, but the verbosity of the language was clearly at the opposite of what I was looking for: it was not suitable for concise and readable scientific code.</p></li>
+<li><p><a class="reference external" href="https://isocpp.org/">C++</a> was a good solution but not for rapid application development. It could only be used for industrializing the code, which was not my goal. I wanted a unique language for both R&amp;D and application development.</p></li>
+<li><p><a class="reference external" href="https://fsharp.org/">F#</a> was theoretically a good candidate because of its functional programming paradigm, and the fact that it combined the performance of a compiled language with the expressiveness of a scripting language. But, it was not mature enough at that time, and the community was very small.</p></li>
+<li><p><a class="reference external" href="https://www.ruby-lang.org/">Ruby</a> was another good candidate, but the lack of scientific libraries was a showstopper.</p></li>
+<li><p><a class="reference external" href="https://www.python.org/">Python</a> was the perfect compromise. It was concise, readable, and had a large standard library. It was also easy to learn and to teach. But, at that time, it was not as popular as it is today, and it was not as powerful as MATLAB for scientific computing. However, I was convinced that it was the right choice for developing applications that were to be used by non-experts.</p></li>
+</ul>
+<p>After a careful evaluation of the alternatives, including discussions with a Python expert of another Department at the CEA (High Performance Computing, where Python was already used but for very different purposes: mainly preprocessing and postprocessing of simulation data, on Linux), I submitted a proposal to the Head of the Laboratory to switch from MATLAB to Python for developing applications. The proposal was accepted despite the fact that I was the only one in a 300-people Departement to know Python (and I was not an expert at all), and that I clearly stated that it would mean to stop releasing new applications for 1 to 2 years - in retrospect, it was a very bold move, and I was very glad for the vote of confidence from the Head of the Laboratory.</p>
+<p>However, in 2007, Python was not as accessible as it is today. There was no ready-to-use integrated environment like MATLAB. Choosing the right GUI library was not as straightforward as it is today, and scientific libraries were not as full-fledged as they are today. So, there were a lot of challenges to overcome…</p>
+</section>
+<section id="about-python-libraries">
+<h2>About Python libraries<a class="headerlink" href="#about-python-libraries" title="Link to this heading">#</a></h2>
+<p>Coming from the MATLAB world, the Python language itself and its standard library was so intellectually refreshing. Everything seems more natural and more consistent. Possibilities were endless.</p>
+<p>For scientific computing, <a class="reference external" href="https://numpy.org/">NumPy</a> and <a class="reference external" href="https://www.scipy.org/">SciPy</a> were delivering the basics - some functions were missing, but this was the opportunity to learn that it was extremely easy to write C/C++ extensions (or even simpler: Fortran extensions, thanks to <a class="reference external" href="https://numpy.org/doc/stable/f2py/">f2py</a>). In other words, there was no blocking issue, only opportunities to learn new things, in a very stimulating environment. And, as a bonus, the community was very active and very helpful.</p>
+<p>For graphical user interfaces, the choice was not as obvious as it is today for desktop applications. <a class="reference external" href="https://docs.python.org/3/library/tkinter.html">Tkinter</a> was the standard GUI library, but it was not as powerful as <a class="reference external" href="https://www.riverbankcomputing.com/software/pyqt/intro">PyQt</a>. There was also <a class="reference external" href="https://www.wxpython.org/">wxPython</a>, but the code was terrible to read and was not as robust as PyQt. Another alternative was <a class="reference external" href="https://pygobject.readthedocs.io/en/latest/">PyGTK</a>, but it was not as portable as PyQt: support was great on Linux, but not on Windows (our main target). So, the choice was clear: PyQt was the way to go. History proved us right: Qt is still the best choice for desktop applications in Python.</p>
+<p>For data visualization, the landscape was obviously quite different as it is today but, actually, the situation is not that different for desktop applications (web applications were almost non-existent at that time):</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/">Matplotlib</a> was the standard for 2D plotting, but it had the same limitations as MATLAB in terms of performance and interactivity. It was a very powerful library with tons of features, but designed for static plots (e.g. publication-quality plots). It was not suitable for interactive data exploration in the field of image processing. Try to show a 10,000x10,000 image with Matplotlib, then zoom in and pan: it was a disaster, and it still is.</p></li>
+<li><p><a class="reference external" href="https://pyqwt.sourceforge.io/">PyQwt</a> was a good alternative for 2D plotting, but it was not as powerful as Matplotlib. It was based on <a class="reference external" href="https://qwt.sourceforge.io/">Qwt</a>, a C++ library, and was not as flexible as Matplotlib. But it was faster, much faster, and it was possible to implement user-defined interactions, plot items, and so on.</p></li>
+</ul>
+<p>So, I decided to develop two new libraries:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/PlotPyStack/guidata">guidata</a>, for automatically generating graphical user interfaces based on the <a class="reference external" href="https://www.riverbankcomputing.com/software/pyqt/intro">PyQt</a> library. The objective was to define datasets (set of parameters) in the form of Python classes, and to automatically generate a GUI for editing these datasets. It was a very simple library, but it was very powerful for generating user-friendly interfaces for non-experts. The idea was similar to the <a class="reference external" href="https://docs.enthought.com/traits/">traits</a> library, but without the Enthought tentacular ecosystem.</p></li>
+<li><p><a class="reference external" href="https://github.com/PlotPyStack/guiqwt">guiqwt</a> (which has been replaced by <a class="reference external" href="https://github.com/PlotPyStack/plotpy">plotpy</a> in 2023), for interactive 2D data visualization based on the <a class="reference external" href="https://www.riverbankcomputing.com/software/pyqt/intro">PyQt</a> library. It was first based on <a class="reference external" href="https://pyqwt.sourceforge.io/">PyQwt</a>, then I was forced to reimplement PyQwt in pure Python in 2014 because it was not maintained anymore - this led to the creation of <a class="reference external" href="https://github.com/PlotPyStack/PythonQwt">PythonQwt</a>. The objective was to provide a library capable of plotting curves with hundreds of thousands of points, as well as big images, with interactive features like zooming, panning, and so on. Moreover, we needed to be able to transform image data in real-time - for that, we developed a C++ extension that was able to perform complex image processing operations in real-time (interpolation, antialiasing, affine transformations, etc.).</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference external" href="https://github.com/PlotPyStack">PlotPyStack</a> organization was created in 2023 to regroup <a class="reference external" href="https://github.com/PlotPyStack/PythonQwt">PythonQwt</a>, <a class="reference external" href="https://github.com/PlotPyStack/guidata">guidata</a> and <a class="reference external" href="https://github.com/PlotPyStack/plotpy">plotpy</a>. The idea was to provide a coherent set of libraries for developing scientific applications in Python.</p>
+<p><a class="reference external" href="https://datalab-platform.com">DataLab</a> is a great example of what can be done with these libraries. It is an open-source platform for signal and image processing and visualization, leveraging the GUI generation capabilities of <a class="reference external" href="https://github.com/PlotPyStack/guidata">guidata</a> (for editing processing parameters, for example) and the interactive visualization capabilities of <a class="reference external" href="https://github.com/PlotPyStack/plotpy">plotpy</a>.</p>
+</div>
+<p>It took one year and a half to develop the initial version of these libraries, and to create the first applications based on them. The first application was a standalone neutron spectroscopy application for controlling scintillator detectors, acquiring data, processing it, and visualizing it. At the end of 2009, this application was put into production and was used by the team and by external users. It was a great success for the team, the best reward I could have hoped for after all the efforts I put into it and the risks I took.</p>
+<p>This first internal production software was also a good demonstration of the power of Python for developing scientific applications. The first step of a journey that would lead to the widespread adoption of Python at the CEA: after that, I founded a Python user group at the CEA, organized training sessions, conferences with external speakers, and so on. But that’s another story…</p>
+</section>
+<section id="about-distributions">
+<h2>About distributions<a class="headerlink" href="#about-distributions" title="Link to this heading">#</a></h2>
+<p>As I mentioned earlier, one of the key strength of MATLAB was the integration of all the tools in a single environment. Working with MATLAB only required to execute the all-in-one installer, and everything was ready to use: the Integrated Development Environment (IDE), the features (processing, visualization, etc.), and the documentation. Everything was distributed in a single package, and everything was consistent.</p>
+<p>The equivalent for Python was not as straightforward. There was only one distribution that was close to what we were looking for, and it was <a class="reference external" href="https://www.enthought.com/product/enthought-python-distribution/">Enthought Python Distribution</a> (EPD). It was a commercial distribution, but it was the only one that was providing a complete environment for scientific computing. It was also shipped with <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>, <a class="reference external" href="https://numpy.org/">NumPy</a>, <a class="reference external" href="https://www.scipy.org/">SciPy</a>, <a class="reference external" href="https://www.riverbankcomputing.com/software/pyqt/intro">PyQt</a>, and many other libraries. It was a great distribution, but it was not free, and it was not open-source. And, more importantly, it was not a real all-in-one solution for Windows users: it was not providing a good IDE, and it was not providing a good documentation system, nor a good integration in the Windows environment.</p>
+<p>That’s why I decided to create a new distribution from scratch, named <a class="reference external" href="https://python-xy.github.io/">Python(x,y)</a>. The idea was to provide a free and open-source distribution that would be as close as possible to the MATLAB environment. The distribution was first shipped with <a class="reference external" href="https://www.eclipse.org/">Eclipse</a> and <a class="reference external" href="https://www.pydev.org/">Pydev</a> for the IDE (in 2008), and later with <a class="reference external" href="https://www.spyder-ide.org/">Spyder</a> (starting from 2009).</p>
+<p>It was just a few months after I even heard about Python that I started developing this distribution. It was a crazy idea, but it was the only way to make Python accessible to non-experts. And it was a great success.</p>
+<p>&gt; 💡 Talking about crazyness, when I look back to this period, it was a bold move to start such a distribution project simply because there was nothing comparable at the time. Actually, this is kind of a pattern for me as I did the exact same thing for the IDE and other projects.</p>
+<p><a class="reference external" href="https://python-xy.github.io/">Python(x,y)</a> was a great way of promoting Python for Windows users, and of sharing my work with the community on the matter of library selection - that was (and still is) an underestimated aspect of the work behind a distribution. Distributing packages means making choices (to avoid conflicts, redundancies, etc.), and it also means testing, documenting, and maintaining packages. It was a lot of work, but it was worth it.</p>
+<p>However, a few years later, <a class="reference external" href="https://python-xy.github.io/">Python(x,y)</a> was discontinued because of the technical difficulties of maintaining it. Initially, the distribution was based on quick and dirty scripts that were not scalable. Maintaining it for a single Python version (2.7, 32-bit) was already a lot of work, but maintaining it for multiple Python versions (2.7, 3.4, 32-bit, 64-bit) was impossible.</p>
+<p>That’s why, in 2012, I created a new distribution named <a class="reference external" href="https://winpython.github.io/">WinPython</a>. The idea was to provide a portable, lightweight distribution that would be easy to install, easy to use, easy to maintain, and capable of deploying multiple Python versions side by side.
+The distribution was shipped with <a class="reference external" href="https://www.spyder-ide.org/">Spyder</a> as the default IDE, and it was providing a lot of scientific libraries out of the box. It was a great success, and it was used by many users around the world. The project is still active today, and it is maintained by <a class="reference external" href="https://github.com/stonebig/">StoneBig</a>. I left the project in 2014, but my teams at <a class="reference external" href="https://codra.net/">Codra</a> (where I work now) are intensively using it for all our Windows-based scientific projects.</p>
+</section>
+<section id="one-ide-to-rule-them-all">
+<h2>One IDE to rule them all<a class="headerlink" href="#one-ide-to-rule-them-all" title="Link to this heading">#</a></h2>
+<p>The success of the migration from MATLAB to Python for developing applications was not only due to the Python language itself, nor to the scientific libraries available, nor to the libraries we developed, nor to the distribution we created. It was also due to the choice of the right IDE. Or rather, the development of the right IDE.</p>
+<p>At that time, in 2008:</p>
+<ul class="simple">
+<li><p>There was no integrated environment for Python that was as powerful as MATLAB. There were a few IDEs available, but none of them was suitable for both R&amp;D and application development. The main issue was the lack of integration between the editor, the console, the help system, and the debugger. The workflow was not as smooth as it was in MATLAB.</p></li>
+<li><p>Basically, either you were using <a class="reference external" href="https://ipython.org/">IPython</a> in a terminal for your interactive data processing and visualization, or you were using an IDE for developing applications (like <a class="reference external" href="https://www.eclipse.org/">Eclipse</a> with <a class="reference external" href="https://www.pydev.org/">Pydev</a>). But, there was no IDE that was providing a good integration between the two worlds.</p></li>
+</ul>
+<p>That’s why I started developing GUI components that will become the core of <a class="reference external" href="https://www.spyder-ide.org/">Spyder</a> many months later.</p>
+<p>So, my initial workflow was to use <a class="reference external" href="https://ipython.org/">IPython</a> for interactive work, and <a class="reference external" href="https://www.eclipse.org/">Eclipse</a> with <a class="reference external" href="https://www.pydev.org/">Pydev</a> for application development. It was not very convenient, but it was the best I could find at that time.</p>
+<p>Then, without thinking about creating an IDE, I started developing a few GUI components:</p>
+<ul class="simple">
+<li><p>I remember that I was missing a MATLAB-like variable explorer, so I developed one. First, I wrote a NumPy array editor based on <a class="reference external" href="https://www.riverbankcomputing.com/software/pyqt/intro">PyQt</a> (this is still the widget used in <a class="reference external" href="https://www.spyder-ide.org/">Spyder</a> for editing NumPy arrays), because viewing image data in a text editor was not very convenient. Then, I wrote a simple variable explorer that was able to display the content of the current namespace. One at a time, I added support for all the basic Python types (int, float, str, list, tuple, dict, etc.). It was a very simple widget, but a huge step forward for my workflow: viewing and editing variables in a GUI was far more efficient than using the console (not only you have an instant overview of the data, but you can also edit it in a more user-friendly way).</p></li>
+</ul>
+<figure class="align-default" id="id29">
+<img alt="Array editor in Spyder" src="../../_images/004-spyder-origins-array_editor.png" />
+<figcaption>
+<p><span class="caption-text">Array editor in Spyder</span><a class="headerlink" href="#id29" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Then, I developed a Qt-based interactive console. The idea was to create an extension to <a class="reference external" href="https://www.riverbankcomputing.com/software/pyqt/intro">PyQt</a> that would provide a console application based on independent widgets interacting with each other. The project was named <cite>PyQtShell</cite>: my original post on PyQt mailing list is still available <a class="reference external" href="https://riverbankcomputing.com/pipermail/pyqt/2009-January/021424.html">here</a>. The main component was <cite>QShell</cite>, a Python shell with useful options (like a ‘-os’ switch for importing os and os.path as osp, a ‘-pylab’ switch for importing matplotlib in interactive mode, and so on) and advanced features like code completion based on <a class="reference external" href="https://www.riverbankcomputing.com/software/qscintilla/intro">QScintilla</a>. I also implemented a <cite>CurrentDirChanger</cite> widget that showed the current directory and allowed to change it. I had plans for additional widgets like <cite>GlobalsExplorer</cite> (for showing and editing global variables), <cite>FileExplorer</cite>, <cite>CodeEditor</cite>, and others, but they were not implemented at that time. It was a very simple console application, but it was a huge step forward for my workflow: having an interactive console in a GUI with integrated widgets was far more efficient than using a terminal (not only you have syntax highlighting and code completion, but you can also integrate it with other GUI components, like the variable explorer).</p></li>
+</ul>
+<figure class="align-default" id="id30">
+<a class="reference internal image-reference" href="../../_images/004-spyder-origins-pyqtshell.png"><img alt="PyQtShell interactive console" src="../../_images/004-spyder-origins-pyqtshell.png" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">PyQtShell interactive console</span><a class="headerlink" href="#id30" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Besides, I started developing a simple code editor based on <a class="reference external" href="https://www.riverbankcomputing.com/software/qscintilla/intro">QScintilla</a>, to which I then added features like class and function browser, code completion, and so on.</p></li>
+</ul>
+<p>At that time, I was not thinking about creating an IDE. I was just developing components that were missing in my workflow. But, little by little, I realized that these components could be integrated into a single application, providing a smooth workflow for both R&amp;D and application development.</p>
+<p>That’s how the idea of <a class="reference external" href="https://www.spyder-ide.org/">Spyder</a> was born. I started integrating these components in early 2009: in January with PyQtShell demo 0.0.2, then adding the array editor in April, the external console in May, and the class browser in June. By July 2009, I released Pydee 0.4.23 - “Pydee” being the initial name for what was described as “a Python development environment providing MATLAB-like features in a simple and light-weighted software”. Pydee was part of pydeelib, a Python module based on PyQt4 and QScintilla2. The archived project is still available <a class="reference external" href="https://code.google.com/archive/p/pydee/">here</a>.</p>
+<figure class="align-default" id="id31">
+<a class="reference internal image-reference" href="../../_images/004-spyder-origins-pydee_splash.png"><img alt="Pydee Splash Screen" src="../../_images/004-spyder-origins-pydee_splash.png" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Pydee Splash Screen (the background image is a photo taken by me at my in-laws’ - branches of an apple tree in spring time)</span><a class="headerlink" href="#id31" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In August 2009, as Pydee 1.0.0beta1 was ready for release, I renamed the project to <a class="reference external" href="https://www.spyder-ide.org/">Spyder</a> (for Scientific PYthon Development EnviRonment). Spyder 1.0.0beta1 was released on August 10, 2009, followed by beta2 on August 14, and the first stable version Spyder 1.0 was released in October 2009.</p>
+<figure class="align-default" id="id32">
+<a class="reference internal image-reference" href="../../_images/004-spyder-origins-spyder_splash.png"><img alt="Spyder 1.0 Splash Screen" src="../../_images/004-spyder-origins-spyder_splash.png" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Spyder 1.0 Splash Screen (again, the background image is a photo taken by me at my in-laws’ - a spider web, with a hedge in the background)</span><a class="headerlink" href="#id32" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id33">
+<a class="reference internal image-reference" href="../../_images/004-spyder-origins-spyder_v1.png"><img alt="Spyder 1.0.0" src="../../_images/004-spyder-origins-spyder_v1.png" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Spyder 1.0.0</span><a class="headerlink" href="#id33" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>So, Spyder started small, as a personal project to try and improve the user experience for scientific computing in Python. But, it quickly grew into a full-fledged IDE, thanks to the adoption by the community and the contributions of many users and developers. Today, Spyder is one of the most popular IDEs for scientific computing in Python, with a large user base and a vibrant community.</p>
+<figure class="align-default" id="id34">
+<a class="reference internal image-reference" href="../../_images/004-spyder-origins-spyder_contributors.png"><img alt="Spyder Contributors" src="../../_images/004-spyder-origins-spyder_contributors.png" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Spyder Contributors, from 2009 to 2024</span><a class="headerlink" href="#id34" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="about-the-logo">
+<h2>About the logo<a class="headerlink" href="#about-the-logo" title="Link to this heading">#</a></h2>
+<p>I designed the first Spyder logo myself, in 2009, using <a class="reference external" href="https://inkscape.org/">Inkscape</a>. I wanted to create a logo that was simple, recognizable, and that conveyed the idea of a spider web (no other intended meaning than the phonetic similarity between “Spyder” and “spider”) with a Python inside.</p>
+<figure class="align-default" id="id35">
+<a class="reference internal image-reference" href="../../_images/004-spyder-origins-spyder_logo_v1.png"><img alt="Spyder 1.0 Logo" src="../../_images/004-spyder-origins-spyder_logo_v1.png" style="width: 40%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Spyder 1.0 Logo</span><a class="headerlink" href="#id35" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The very same logo was used until Spyder 5, that is for more than 10 years. In 2020, for the release of Spyder 5, <a class="reference external" href="https://github.com/isabela-pf/">Isabela Presedo-Floyd</a> designed a new logo that is still used today. The idea was to keep the same concept, but to modernize the design and to make it more appealing. The new logo required a lot of iterations and discussions (see for example <a class="reference external" href="https://github.com/spyder-ide/spyder/issues/13181">this issue</a> on Spyder’s GitHub repository), but the final result is great.</p>
+<figure class="align-default" id="id36">
+<a class="reference internal image-reference" href="../../_images/004-spyder-origins-spyder_logo_v5.png"><img alt="Spyder 5 Logo" src="../../_images/004-spyder-origins-spyder_logo_v5.png" style="width: 40%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Spyder 5 Logo</span><a class="headerlink" href="#id36" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>&gt; ℹ️ For the record, I was not involved in the design of the new logo, as I had left the Spyder project a few years earlier. And when Carlos Cordoba (the current lead maintainer of Spyder) asked me for my opinion on the new logo, I was very reluctant at first - I was attached to the old logo, and I was not sure that a new logo was necessary. Then, after a while, I realized that the new logo was a great improvement, and I fully supported the change. Maybe a part of me was not ready to let go of Spyder, after all these years of involvement in the project…</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>Looking back at Spyder’s origins, what started as a personal quest to find better tools for scientific application development grew into something much larger than I could have imagined. The decision to switch from MATLAB to Python in 2007 was risky - I was alone in a 300-people department advocating for a language that was far from mainstream in scientific computing. But the bet paid off, not just for my team at the CEA, but for countless scientists and engineers around the world who found in Spyder a familiar yet powerful environment for their work.</p>
+<p>Spyder’s creation was never planned as a grand project. It emerged organically from real needs: a variable explorer here, an interactive console there, a code editor with the right features. Each component was built to solve a specific problem in my daily workflow. The beauty of open source is that these personal solutions can become community tools, and Spyder became exactly that - a tool born from necessity, shaped by community feedback, and refined through years of collective effort.</p>
+<p>Today, Spyder has far outgrown my initial contributions. Under the leadership of Carlos Cordoba and the dedication of the current team and contributors, it continues to evolve and adapt to the changing landscape of scientific computing. While I’ve moved on to other projects like <a class="reference external" href="https://datalab-platform.com">DataLab</a>, I’m proud of what we built together and grateful for the community that embraced it. Spyder proved that with the right tools, Python could not only match MATLAB for scientific work - it could surpass it.</p>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+  
+  
+
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
+    <a href="../003-pydataparis2024/">
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>PyData Paris 2024: My First Sponsoring Experience</span>
+    </a>
+    
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+  </span>
+</div>
+
+  
+  
+</div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-contact-with-python">First contact with Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-python-libraries">About Python libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-distributions">About distributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-ide-to-rule-them-all">One IDE to rule them all</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-the-logo">About the logo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Pierre Raybaut.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
